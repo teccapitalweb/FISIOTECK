@@ -1,127 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FISIOTECK MÉXICO | Capacitación especializada en fisioterapia</title>
-  <meta name="description" content="FISIOTECK MÉXICO ofrece capacitación especializada en fisioterapia con cursos profesionales, comunidad de alumnos y atención directa por WhatsApp." />
-  <link rel="preload" href="assets/banner-fisioteck.webp" as="image" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="FISIOTECK MÉXICO ofrece capacitación especializada en fisioterapia con cursos, formación profesional y atención directa por WhatsApp.">
+  <link rel="preload" href="assets/banner.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="floating-buttons">
-    <a class="floating-btn whatsapp" href="https://wa.me/522381479365" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
-    <a class="floating-btn facebook" href="https://www.facebook.com/profile.php?id=61575818279014" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-    <a class="floating-btn anchor" href="#cursos" aria-label="Ir a cursos">+</a>
-  </div>
-
   <header class="site-header" id="inicio">
     <div class="container nav">
-      <a class="brand" href="#inicio" aria-label="FISIOTECK MÉXICO inicio">
-        <img src="assets/logo-fisioteck.webp" alt="Logo FISIOTECK MÉXICO" />
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-badge">
+          <img src="assets/logo.jpg" alt="Logo FISIOTECK MÉXICO">
+        </span>
       </a>
-      <nav class="menu">
+
+      <nav class="menu" id="menu">
         <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
         <a href="#cursos">Cursos</a>
         <a href="#alumnos">Alumnos</a>
         <a href="#resenas">Reseñas</a>
         <a href="#contacto">Contacto</a>
       </nav>
+
       <a class="nav-cta" href="https://wa.me/522381479365" target="_blank" rel="noopener noreferrer">Inscribirme</a>
-      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
+  <aside class="floating-tools" aria-label="Accesos rápidos">
+    <a class="float-btn whatsapp" href="https://wa.me/522381479365" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.33.18 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.34-1.66a11.88 11.88 0 0 0 5.74 1.47h.01c6.56 0 11.9-5.33 11.9-11.9 0-3.18-1.24-6.17-3.47-8.43Zm-8.44 18.3h-.01a9.84 9.84 0 0 1-5.02-1.38l-.36-.21-3.76.99 1-3.66-.23-.38a9.82 9.82 0 0 1-1.5-5.23c0-5.44 4.43-9.87 9.89-9.87 2.64 0 5.12 1.03 6.98 2.89a9.8 9.8 0 0 1 2.89 6.98c0 5.45-4.43 9.88-9.88 9.88Zm5.42-7.4c-.3-.15-1.77-.87-2.05-.97-.27-.1-.46-.15-.66.15-.2.3-.76.97-.94 1.17-.17.2-.35.22-.65.08-.3-.15-1.29-.47-2.46-1.5-.91-.8-1.52-1.77-1.7-2.07-.18-.3-.02-.46.13-.6.13-.12.3-.33.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.45 1.07 2.86 1.22 3.05.15.2 2.1 3.2 5.08 4.48.7.3 1.25.48 1.67.62.7.22 1.33.19 1.83.11.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.43-.08-.12-.28-.2-.58-.35Z"/></svg>
+    </a>
+    <a class="float-btn facebook" href="https://www.facebook.com/profile.php?id=61575818279014" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.5h3.05V9.4c0-3.03 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.48 0-1.94.92-1.94 1.86v2.24h3.3l-.53 3.5h-2.77V24C19.61 23.09 24 18.1 24 12.07z"/></svg>
+    </a>
+    <button class="float-btn top" id="toTop" aria-label="Volver arriba">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.5 4.5 13l1.77 1.77 4.48-4.48V19h2.5v-8.7l4.46 4.47L19.5 13 12 5.5z"/></svg>
+    </button>
+  </aside>
+
   <main>
     <section class="hero">
-      <div class="hero-bg"></div>
+      <div class="hero-shape hero-shape-a"></div>
+      <div class="hero-shape hero-shape-b"></div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <span class="eyebrow">FISIOTECK MÉXICO</span>
           <h1>Capacitación especializada en fisioterapia</h1>
-          <p>
-            Formación profesional enfocada en actualización clínica, fortalecimiento de habilidades y crecimiento continuo para la comunidad de fisioterapia.
-          </p>
+          <p>Formación profesional para actualizar conocimientos, fortalecer habilidades clínicas y seguir creciendo dentro del campo de la fisioterapia.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#cursos">Ver cursos</a>
-            <a class="btn btn-secondary" href="https://wa.me/522381479365" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
+            <a class="btn btn-secondary" href="#nosotros">Conocer FISIOTECK</a>
           </div>
-
-          <div class="hero-stats">
-            <article class="stat-card">
+          <div class="hero-metrics">
+            <article class="metric">
               <strong data-count="26">0</strong>
               <span>Cursos especializados</span>
             </article>
-            <article class="stat-card">
+            <article class="metric">
               <strong data-count="2000">0</strong>
-              <span>Alumnos</span>
+              <span>Alumnos capacitados</span>
             </article>
-            <article class="stat-card">
-              <strong data-count="8">0</strong>
-              <span>Reseñas visuales</span>
+            <article class="metric">
+              <strong data-count="100">0</strong>
+              <span>Capacitación referente a FISIOTECK</span>
             </article>
           </div>
         </div>
 
-        <div class="hero-banner reveal">
-          <img src="assets/banner-fisioteck.webp" alt="Banner principal de FISIOTECK MÉXICO" />
+        <div class="hero-media reveal">
+          <div class="hero-card">
+            <img src="assets/banner.jpg" alt="Banner principal de FISIOTECK MÉXICO">
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section intro">
-      <div class="container narrow reveal">
-        <span class="section-tag">FISIOTECK MÉXICO</span>
-        <h2>Una propuesta clara, actual y visual para tu formación</h2>
-        <p>
-          Esta página está enfocada exclusivamente en FISIOTECK MÉXICO, su oferta académica, su comunidad de alumnos y sus reseñas. Todo el contenido visual y la comunicación están orientados a mostrar una imagen profesional, confiable y especializada en fisioterapia.
-        </p>
+    <section class="section trust-strip">
+      <div class="container trust-grid reveal">
+        <div><span class="mini-tag">Formación</span><p>Oferta enfocada en fisioterapia y actualización profesional.</p></div>
+        <div><span class="mini-tag">Comunidad</span><p>Más de 2000 alumnos fortaleciendo su práctica clínica.</p></div>
+        <div><span class="mini-tag">Atención</span><p>Contacto directo por WhatsApp para resolver dudas e inscripción.</p></div>
       </div>
     </section>
 
-    <section class="section courses" id="cursos">
+    <section class="section about" id="nosotros">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-tag">Oferta académica</span>
-          <h2>26 cursos de FISIOTECK MÉXICO</h2>
-          <p>Selecciona cualquier curso para abrir su ventana emergente y visualizarlo con mayor detalle.</p>
+          <span class="section-pill">Nosotros</span>
+          <h2>La estructura de una marca de formación, adaptada a FISIOTECK MÉXICO</h2>
+          <p>FISIOTECK MÉXICO es una propuesta enfocada en capacitación especializada en fisioterapia, con una presentación clara, moderna y centrada en su oferta académica.</p>
         </div>
-        <div class="courses-grid" id="coursesGrid"></div>
+
+        <div class="about-grid">
+          <article class="info-card reveal">
+            <h3>Quiénes somos</h3>
+            <p>FISIOTECK MÉXICO es una plataforma de capacitación enfocada en fisioterapia, creada para estudiantes y profesionales que buscan actualizar conocimientos, fortalecer habilidades clínicas y mantenerse en formación continua.</p>
+          </article>
+          <article class="info-card reveal">
+            <h3>Misión</h3>
+            <p>Brindar capacitación especializada en fisioterapia mediante programas formativos accesibles, actuales y orientados al crecimiento profesional dentro del área de rehabilitación.</p>
+          </article>
+          <article class="info-card reveal">
+            <h3>Visión</h3>
+            <p>Consolidarse como un referente de formación en fisioterapia, destacando por una oferta académica útil, visualmente sólida y enfocada en la actualización constante.</p>
+          </article>
+        </div>
+
+        <div class="values-box reveal">
+          <div class="values-copy">
+            <span class="section-pill">Valores</span>
+            <h3>Profesionalismo, actualización y compromiso con la formación</h3>
+            <p>La comunicación y estructura de FISIOTECK MÉXICO están pensadas para transmitir una imagen confiable, clara y especializada en fisioterapia.</p>
+          </div>
+          <div class="values-grid">
+            <div class="value-chip">Profesionalismo</div>
+            <div class="value-chip">Actualización constante</div>
+            <div class="value-chip">Ética profesional</div>
+            <div class="value-chip">Calidad educativa</div>
+            <div class="value-chip">Enfoque clínico</div>
+            <div class="value-chip">Compromiso con el aprendizaje</div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section students" id="alumnos">
+    <section class="section courses-section" id="cursos">
+      <div class="container">
+        <div class="section-head centered reveal">
+          <span class="section-pill">Cursos</span>
+          <h2>Nuestros cursos</h2>
+          <p>Conoce la oferta de capacitación de FISIOTECK MÉXICO. Cada curso muestra su portada, un mini temario y acceso a más información.</p>
+        </div>
+
+        <div class="filters reveal" id="filters"></div>
+
+        <div class="carousel reveal">
+          <button class="carousel-arrow prev" id="prevCourses" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.7 5.3-1.4-1.4L5.2 12l8.1 8.1 1.4-1.4L8 12l6.7-6.7Z"/></svg>
+          </button>
+
+          <div class="carousel-window" id="carouselWindow">
+            <div class="carousel-track" id="carouselTrack"></div>
+          </div>
+
+          <button class="carousel-arrow next" id="nextCourses" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.3 18.7 1.4 1.4 8.1-8.1-8.1-8.1-1.4 1.4L16 12l-6.7 6.7Z"/></svg>
+          </button>
+        </div>
+
+        <div class="dots" id="carouselDots" aria-label="Indicadores del carrusel"></div>
+      </div>
+    </section>
+
+    <section class="section community" id="alumnos">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-tag">Comunidad</span>
-          <h2>Más de 2000 alumnos</h2>
-          <p>Una comunidad que impulsa el aprendizaje, la actualización profesional y el crecimiento en fisioterapia.</p>
+          <span class="section-pill">Alumnos</span>
+          <h2>Una comunidad que fortalece su formación</h2>
+          <p>Más de 2000 alumnos han confiado en FISIOTECK MÉXICO para continuar su desarrollo profesional en fisioterapia.</p>
         </div>
-        <div class="student-gallery" id="studentGallery"></div>
+        <div class="gallery-grid" id="studentGallery"></div>
       </div>
     </section>
 
-    <section class="section reviews" id="resenas">
+    <section class="section reviews-section" id="resenas">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-tag">Confianza</span>
-          <h2>Reseñas de FISIOTECK MÉXICO</h2>
-          <p>Testimonios visuales que refuerzan la experiencia de la comunidad que ha confiado en la capacitación.</p>
+          <span class="section-pill">Reseñas</span>
+          <h2>Experiencias que respaldan la capacitación</h2>
+          <p>Opiniones visuales compartidas por la comunidad de FISIOTECK MÉXICO.</p>
         </div>
-        <div class="reviews-track" id="reviewsTrack"></div>
+        <div class="reviews-grid" id="reviewsGrid"></div>
       </div>
     </section>
 
-    <section class="section cta" id="contacto">
-      <div class="container cta-box reveal">
-        <div>
-          <span class="section-tag">Contacto</span>
-          <h2>Inscríbete y conoce la oferta de FISIOTECK MÉXICO</h2>
-          <p>Comunicación directa para resolver dudas e iniciar tu proceso de inscripción.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="https://wa.me/522381479365" target="_blank" rel="noopener noreferrer">Enviar WhatsApp</a>
-          <a class="btn btn-secondary" href="https://www.facebook.com/profile.php?id=61575818279014" target="_blank" rel="noopener noreferrer">Ver Facebook</a>
+    <section class="section cta-section" id="contacto">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div class="cta-copy">
+            <span class="section-pill">Contacto</span>
+            <h2>Solicita información y conoce la oferta de FISIOTECK MÉXICO</h2>
+            <p>Comunicación directa para resolver dudas y recibir atención sobre cursos, modalidad e inscripción.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://wa.me/522381479365" target="_blank" rel="noopener noreferrer">Informes por WhatsApp</a>
+            <a class="btn btn-secondary" href="#cursos">Explorar cursos</a>
+          </div>
         </div>
       </div>
     </section>
@@ -129,13 +200,14 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <img class="footer-logo" src="assets/logo-fisioteck.webp" alt="FISIOTECK MÉXICO" />
+      <div class="footer-brand">
+        <div class="brand-badge footer-badge"><img src="assets/logo.jpg" alt="FISIOTECK MÉXICO"></div>
         <p>Capacitación especializada en fisioterapia.</p>
       </div>
       <div>
-        <h3>Navegación</h3>
+        <h3>Secciones</h3>
         <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
         <a href="#cursos">Cursos</a>
         <a href="#alumnos">Alumnos</a>
         <a href="#resenas">Reseñas</a>
@@ -146,21 +218,46 @@
         <a href="https://www.facebook.com/profile.php?id=61575818279014" target="_blank" rel="noopener noreferrer">Facebook</a>
       </div>
     </div>
-    <div class="container footer-copy">
+    <div class="container footer-bottom">
       <p>© <span id="year"></span> FISIOTECK MÉXICO. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <div class="modal" id="courseModal" aria-hidden="true">
     <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-card">
-      <button class="modal-close" type="button" data-close="true" aria-label="Cerrar">×</button>
-      <img id="modalImage" src="" alt="" />
-      <div class="modal-content">
-        <span class="section-tag">Curso FISIOTECK MÉXICO</span>
-        <h3 id="modalTitle"></h3>
-        <p>Este curso forma parte de la oferta académica de FISIOTECK MÉXICO.</p>
-        <a class="btn btn-primary" href="https://wa.me/522381479365" target="_blank" rel="noopener noreferrer">Solicitar información</a>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="Cerrar" data-close="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.29 19.7 2.88 18.3 9.17 12 2.88 5.71 4.29 4.29l6.3 6.3 6.29-6.3z"/></svg>
+      </button>
+      <div class="modal-layout">
+        <div class="modal-image-wrap">
+          <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-content">
+          <span class="section-pill">Curso FISIOTECK MÉXICO</span>
+          <h3 id="modalTitle"></h3>
+          <div class="modal-meta">
+            <span id="modalCategory"></span>
+            <span>Modalidad online</span>
+          </div>
+          <p id="modalSummary"></p>
+
+          <div class="modal-columns">
+            <div>
+              <h4>Mini temario</h4>
+              <ul id="modalTemario"></ul>
+            </div>
+            <div>
+              <h4>Beneficios</h4>
+              <ul id="modalBenefits"></ul>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <a class="btn btn-primary" href="https://wa.me/522381479365" target="_blank" rel="noopener noreferrer">Informes</a>
+            <button class="btn btn-secondary" type="button" data-close="true">Cerrar</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
