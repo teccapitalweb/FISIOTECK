@@ -85,7 +85,7 @@ a { text-decoration: none; }
 }
 #inicio::before {
   content: ''; position: absolute; inset: 0;
-  background: url('assets/img/banner/banner.jpg') center/cover no-repeat;
+  background: url('assets/img/banner/banner.png') center/cover no-repeat;
   opacity: 0.18;
 }
 #inicio::after {

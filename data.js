@@ -17,14 +17,21 @@ const DATA = {
 
   // ---- CURSOS ----
   cursos: [
-    { img: "assets/img/cursos/curso1.jpg", nombre: "Curso 1" },
-    { img: "assets/img/cursos/curso2.jpg", nombre: "Curso 2" },
-    { img: "assets/img/cursos/curso3.jpg", nombre: "Curso 3" },
-    { img: "assets/img/cursos/curso4.jpg", nombre: "Curso 4" },
-    { img: "assets/img/cursos/curso5.jpg", nombre: "Curso 5" },
-    { img: "assets/img/cursos/curso6.jpg", nombre: "Curso 6" },
-    { img: "assets/img/cursos/curso7.jpg", nombre: "Curso 7" },
-    { img: "assets/img/cursos/curso8.jpg", nombre: "Curso 8" }
+    { img: "assets/img/cursos/curso1.jpg",  nombre: "Curso 1" },
+    { img: "assets/img/cursos/curso2.jpg",  nombre: "Curso 2" },
+    { img: "assets/img/cursos/curso3.jpg",  nombre: "Curso 3" },
+    { img: "assets/img/cursos/curso4.jpg",  nombre: "Curso 4" },
+    { img: "assets/img/cursos/curso5.jpg",  nombre: "Curso 5" },
+    { img: "assets/img/cursos/curso6.jpg",  nombre: "Curso 6" },
+    { img: "assets/img/cursos/curso7.jpg",  nombre: "Curso 7" },
+    { img: "assets/img/cursos/curso8.jpg",  nombre: "Curso 8" },
+    { img: "assets/img/cursos/curso9.jpg",  nombre: "Curso 9" },
+    { img: "assets/img/cursos/curso10.jpg", nombre: "Curso 10" },
+    { img: "assets/img/cursos/curso11.jpg", nombre: "Curso 11" },
+    { img: "assets/img/cursos/curso12.jpg", nombre: "Curso 12" },
+    { img: "assets/img/cursos/curso13.jpg", nombre: "Curso 13" },
+    { img: "assets/img/cursos/curso14.jpg", nombre: "Curso 14" },
+    { img: "assets/img/cursos/curso15.jpg", nombre: "Curso 15" }
   ],
 
   // ---- GALERÍA ----
@@ -36,9 +43,7 @@ const DATA = {
     "assets/img/galeria/foto5.jpg",
     "assets/img/galeria/foto6.jpg",
     "assets/img/galeria/foto7.jpg",
-    "assets/img/galeria/foto8.jpg",
-    "assets/img/galeria/foto9.jpg",
-    "assets/img/galeria/foto10.jpg"
+    "assets/img/galeria/foto8.jpg"
   ],
 
   // ---- OPINIONES / RESEÑAS ----
