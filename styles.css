@@ -290,22 +290,13 @@ section { padding: 80px 24px; }
 .opiniones-carousel-wrapper { overflow: hidden; }
 .opiniones-carousel { display: flex; gap: 20px; transition: transform 0.4s ease; }
 .opinion-card {
-  min-width: 320px; flex-shrink: 0;
-  background: rgba(255,255,255,0.08); backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: var(--radius); padding: 26px 24px;
+  min-width: 340px; flex-shrink: 0;
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
 }
-.opinion-stars { color: #ffd700; font-size: 1.1rem; margin-bottom: 14px; }
-.opinion-texto { color: rgba(255,255,255,0.88); font-size: 0.95rem; line-height: 1.7; margin-bottom: 18px; }
-.opinion-autor { display: flex; align-items: center; gap: 12px; }
-.opinion-avatar {
-  width: 42px; height: 42px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--verde), var(--azul-light));
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Exo 2', sans-serif; font-weight: 800; color: #fff; font-size: 1rem; flex-shrink: 0;
-}
-.opinion-nombre { font-family: 'Exo 2', sans-serif; font-weight: 700; color: #fff; font-size: 0.9rem; }
-.opinion-fecha { color: rgba(255,255,255,0.5); font-size: 0.78rem; margin-top: 2px; }
+.opinion-card:hover { transform: translateY(-4px); }
+.opinion-card img { width: 100%; height: auto; display: block; }
 
 /* ===== CONTACTO ===== */
 #contacto { background: var(--gris-claro); }

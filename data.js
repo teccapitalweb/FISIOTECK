@@ -48,46 +48,14 @@ const DATA = {
 
   // ---- OPINIONES / RESEÑAS ----
   opiniones: [
-    {
-      nombre: "Ale Muro",
-      fecha: "Septiembre 2025",
-      texto: "Información actualizada, de buena calidad y siempre atentos a las dudas que puedan surgir, respuestas al instante!"
-    },
-    {
-      nombre: "Ineraj Hernandez",
-      fecha: "Septiembre 2025",
-      texto: "Información muy interesante, actualizada y de calidad, además de un servicio excelente."
-    },
-    {
-      nombre: "Chapo Rangel",
-      fecha: "Septiembre 2025",
-      texto: "Excelentes cursos, nos ayudan a seguir preparándonos y mantenernos actualizados."
-    },
-    {
-      nombre: "Luna Mary Sol",
-      fecha: "Septiembre 2025",
-      texto: "Es una página de aportes importantes que nos ayuda a complementar conocimientos además de los cursos que brinda. 100% recomendable 👌"
-    },
-    {
-      nombre: "Jhosh lah-hel",
-      fecha: "Septiembre 2025",
-      texto: "Siento que es una oportunidad para aprender y conocer más. Es una nueva forma de prepararse."
-    },
-    {
-      nombre: "Azul Messina",
-      fecha: "Septiembre 2025",
-      texto: "Muy buenas certificaciones ✨"
-    },
-    {
-      nombre: "Clau Cobos",
-      fecha: "Diciembre 2025",
-      texto: "Excelente página y cursos muy buenos y accesibles. 100% recomendable."
-    },
-    {
-      nombre: "Laura Nazaretty Mariaca",
-      fecha: "Diciembre 2025",
-      texto: "Me gustan sus clases, están entendibles. Me ayudan a comprender mejor los diferentes temas anatómicos."
-    }
+    { img: "assets/img/resenas/resena1.png" },
+    { img: "assets/img/resenas/resena2.png" },
+    { img: "assets/img/resenas/resena3.png" },
+    { img: "assets/img/resenas/resena4.png" },
+    { img: "assets/img/resenas/resena5.png" },
+    { img: "assets/img/resenas/resena6.png" },
+    { img: "assets/img/resenas/resena7.png" },
+    { img: "assets/img/resenas/resena8.png" }
   ],
 
   // ---- CONTACTO ----
