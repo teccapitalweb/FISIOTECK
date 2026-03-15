@@ -1,139 +1,134 @@
-const siteData = {
-  "courses": [
+// =============================================
+//  DATA.JS — FisioTeck
+//  Edita aquí toda la información del sitio
+// =============================================
+
+const DATA = {
+
+  // ---- ÁREAS (sección Nosotros) ----
+  areas: [
+    { icon: "🧠", texto: "Rehabilitación Neurológica" },
+    { icon: "🏃", texto: "Fisioterapia Deportiva" },
+    { icon: "🦴", texto: "Rehabilitación Ortopédica" },
+    { icon: "👵", texto: "Geriatría Clínica" },
+    { icon: "📋", texto: "Dosificación de Cargas" },
+    { icon: "🎓", texto: "Certificación Avalada" }
+  ],
+
+  // ---- CURSOS ----
+  cursos: [
+    { img: "assets/img/cursos/curso1.jpg", nombre: "Curso 1" },
+    { img: "assets/img/cursos/curso2.jpg", nombre: "Curso 2" },
+    { img: "assets/img/cursos/curso3.jpg", nombre: "Curso 3" },
+    { img: "assets/img/cursos/curso4.jpg", nombre: "Curso 4" },
+    { img: "assets/img/cursos/curso5.jpg", nombre: "Curso 5" },
+    { img: "assets/img/cursos/curso6.jpg", nombre: "Curso 6" },
+    { img: "assets/img/cursos/curso7.jpg", nombre: "Curso 7" },
+    { img: "assets/img/cursos/curso8.jpg", nombre: "Curso 8" }
+  ],
+
+  // ---- GALERÍA ----
+  galeria: [
+    "assets/img/galeria/foto1.jpg",
+    "assets/img/galeria/foto2.jpg",
+    "assets/img/galeria/foto3.jpg",
+    "assets/img/galeria/foto4.jpg",
+    "assets/img/galeria/foto5.jpg",
+    "assets/img/galeria/foto6.jpg",
+    "assets/img/galeria/foto7.jpg",
+    "assets/img/galeria/foto8.jpg",
+    "assets/img/galeria/foto9.jpg",
+    "assets/img/galeria/foto10.jpg"
+  ],
+
+  // ---- OPINIONES / RESEÑAS ----
+  opiniones: [
     {
-      "name": "Rehabilitación neurológica",
-      "image": "assets/course-01.webp"
+      nombre: "Ale Muro",
+      fecha: "Septiembre 2025",
+      texto: "Información actualizada, de buena calidad y siempre atentos a las dudas que puedan surgir, respuestas al instante!"
     },
     {
-      "name": "Estimulación temprana y psicomotricidad",
-      "image": "assets/course-02.webp"
+      nombre: "Ineraj Hernandez",
+      fecha: "Septiembre 2025",
+      texto: "Información muy interesante, actualizada y de calidad, además de un servicio excelente."
     },
     {
-      "name": "Rehabilitación vestibular en población geriátrica",
-      "image": "assets/course-03.webp"
+      nombre: "Chapo Rangel",
+      fecha: "Septiembre 2025",
+      texto: "Excelentes cursos, nos ayudan a seguir preparándonos y mantenernos actualizados."
     },
     {
-      "name": "Tratamiento de lesiones musculoesqueléticas en el deporte",
-      "image": "assets/course-04.webp"
+      nombre: "Luna Mary Sol",
+      fecha: "Septiembre 2025",
+      texto: "Es una página de aportes importantes que nos ayuda a complementar conocimientos además de los cursos que brinda. 100% recomendable 👌"
     },
     {
-      "name": "Pilates terapéuticos aplicada a fisioterapia",
-      "image": "assets/course-05.webp"
+      nombre: "Jhosh lah-hel",
+      fecha: "Septiembre 2025",
+      texto: "Siento que es una oportunidad para aprender y conocer más. Es una nueva forma de prepararse."
     },
     {
-      "name": "Rehabilitación pulmonar pediátrica",
-      "image": "assets/course-06.webp"
+      nombre: "Azul Messina",
+      fecha: "Septiembre 2025",
+      texto: "Muy buenas certificaciones ✨"
     },
     {
-      "name": "Dosificación de cargas y trabajo preventivo en el deporte",
-      "image": "assets/course-07.webp"
+      nombre: "Clau Cobos",
+      fecha: "Diciembre 2025",
+      texto: "Excelente página y cursos muy buenos y accesibles. 100% recomendable."
     },
     {
-      "name": "Fisioterapia pulmonar: hipoxemia y ventilación",
-      "image": "assets/course-08.webp"
-    },
-    {
-      "name": "Neurodinamia en rehabilitación de lesiones",
-      "image": "assets/course-09.webp"
-    },
-    {
-      "name": "Mejora de la movilidad y la función motora en geriatría",
-      "image": "assets/course-10.webp"
-    },
-    {
-      "name": "Barre: flexibilidad y fuerza para transformar tu cuerpo",
-      "image": "assets/course-11.webp"
-    },
-    {
-      "name": "Principios de neuroplasticidad en la terapia física",
-      "image": "assets/course-12.webp"
-    },
-    {
-      "name": "Fisiopatología y rehabilitación en lesiones deportivas",
-      "image": "assets/course-13.webp"
-    },
-    {
-      "name": "Yoga para la flexibilidad y fuerza corporal",
-      "image": "assets/course-14.webp"
-    },
-    {
-      "name": "Introducción al kinesiotaping: técnicas de rehabilitación",
-      "image": "assets/course-15.webp"
-    },
-    {
-      "name": "Terapia manual ortopédica funcional",
-      "image": "assets/course-16.webp"
-    },
-    {
-      "name": "Anatomía funcional y biomecánica aplicada en el deporte",
-      "image": "assets/course-17.webp"
-    },
-    {
-      "name": "Ejercicio terapéutico en embarazo y postparto",
-      "image": "assets/course-18.webp"
-    },
-    {
-      "name": "Rehabilitación con tecnología y sensores",
-      "image": "assets/course-19.webp"
-    },
-    {
-      "name": "Ejercicio terapéutico funcional en rehabilitación",
-      "image": "assets/course-20.webp"
-    },
-    {
-      "name": "Rehabilitación postoperatoria de prótesis en cadera y rodilla",
-      "image": "assets/course-21.webp"
-    },
-    {
-      "name": "Entrenamiento hipopresivo",
-      "image": "assets/course-22.webp"
-    },
-    {
-      "name": "Hipoterapia y la rehabilitación infantil",
-      "image": "assets/course-23.webp"
-    },
-    {
-      "name": "Rehabilitación cardiopulmonar: tratamiento fisioterapéutico",
-      "image": "assets/course-24.webp"
-    },
-    {
-      "name": "Biomecánica aplicada al gesto deportivo",
-      "image": "assets/course-25.webp"
-    },
-    {
-      "name": "Intervención temprana en niños con síndrome de Down",
-      "image": "assets/course-26.webp"
+      nombre: "Laura Nazaretty Mariaca",
+      fecha: "Diciembre 2025",
+      texto: "Me gustan sus clases, están entendibles. Me ayudan a comprender mejor los diferentes temas anatómicos."
     }
   ],
-  "students": [
-    "assets/student-01.webp",
-    "assets/student-02.webp",
-    "assets/student-03.webp",
-    "assets/student-04.webp",
-    "assets/student-05.webp",
-    "assets/student-06.webp",
-    "assets/student-07.webp",
-    "assets/student-08.webp",
-    "assets/student-09.webp",
-    "assets/student-10.webp"
+
+  // ---- CONTACTO ----
+  contacto: [
+    {
+      icon: "💬",
+      titulo: "WhatsApp",
+      descripcion: "+52 238 147 9365 · Atención directa y rápida",
+      btnTexto: "Escribir ahora",
+      url: "https://wa.me/522381479365?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos"
+    },
+    {
+      icon: "📘",
+      titulo: "Facebook",
+      descripcion: "FisioTec · Conoce novedades y publicaciones",
+      btnTexto: "Ver página",
+      url: "https://www.facebook.com/profile.php?id=61575818279014"
+    },
+    {
+      icon: "📸",
+      titulo: "Instagram",
+      descripcion: "@fisioteck · Síguenos en redes sociales",
+      btnTexto: "Ver perfil",
+      url: "https://www.instagram.com/odonteckconsulting/"
+    },
+    {
+      icon: "📧",
+      titulo: "Correo",
+      descripcion: "odontckconsul@gmail.com · Consultas e información",
+      btnTexto: "Enviar correo",
+      url: "mailto:odontckconsul@gmail.com"
+    }
   ],
-  "reviews": [
-    "assets/review-01.webp",
-    "assets/review-02.webp",
-    "assets/review-03.webp",
-    "assets/review-04.webp",
-    "assets/review-05.webp",
-    "assets/review-06.webp",
-    "assets/review-07.webp",
-    "assets/review-08.webp"
+
+  // ---- REDES SOCIALES (footer) ----
+  redes: [
+    { label: "f",  url: "https://www.facebook.com/profile.php?id=61575818279014", title: "Facebook" },
+    { label: "ig", url: "https://www.instagram.com/odonteckconsulting/", title: "Instagram" },
+    { label: "wa", url: "https://wa.me/522381479365", title: "WhatsApp" }
   ],
-  "stats": {
-    "courses": 26,
-    "students": 2000,
-    "reviews": 8
-  },
-  "links": {
-    "whatsapp": "https://wa.me/522381479365",
-    "facebook": "https://www.facebook.com/profile.php?id=61575818279014"
-  }
+
+  // ---- FOOTER CONTACTO ----
+  footerContacto: [
+    { texto: "📲 +52 238 147 9365", url: "https://wa.me/522381479365" },
+    { texto: "📧 odontckconsul@gmail.com", url: "mailto:odontckconsul@gmail.com" },
+    { texto: "📘 Facebook", url: "https://www.facebook.com/profile.php?id=61575818279014" }
+  ]
+
 };
