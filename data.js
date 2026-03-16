@@ -1,11 +1,4 @@
-// =============================================
-//  DATA.JS — FisioTeck
-//  Edita aquí toda la información del sitio
-// =============================================
-
 const DATA = {
-
-  // ---- ÁREAS (sección Nosotros) ----
   areas: [
     { icon: "🧠", texto: "Rehabilitación Neurológica" },
     { icon: "🏃", texto: "Fisioterapia Deportiva" },
@@ -14,319 +7,49 @@ const DATA = {
     { icon: "📋", texto: "Dosificación de Cargas" },
     { icon: "🎓", texto: "Certificación Avalada" }
   ],
-
-  // ---- CURSOS ----
+  categorias: ["Todos","Neurológica","Deportiva","Ortopédica","Embarazo","Infantil","Cardiopulmonar","Bienestar"],
   cursos: [
-    {
-      img: "assets/img/cursos/curso1.jpg",
-      nombre: "Neurodinamia en Rehabilitación de Lesiones", categoria: "Neurológica",
-      ponente: "Lic. Erika Romero Luna",
-      precio: "$550 MXN",
-      inicio: "16 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Fundamentos de neurodinamia",
-        "Evaluación del sistema nervioso",
-        "Técnicas de movilización neural",
-        "Aplicación en lesiones musculoesqueléticas",
-        "Casos clínicos y práctica"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso2.jpg",
-      nombre: "Barrel: Flexibilidad y Fuerza para Transformar tu Cuerpo", categoria: "Bienestar",
-      ponente: "FisioTeck",
-      precio: "$550 MXN",
-      inicio: "16 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Introducción al método Barrel",
-        "Principios de flexibilidad y fuerza",
-        "Rutinas progresivas con barrel",
-        "Corrección postural y alineación",
-        "Planificación de sesiones"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso3.jpg",
-      nombre: "Principios de Neuroplasticidad a la Terapia Física", categoria: "Neurológica",
-      ponente: "Lic. Elizabeth Pozos Alvarado",
-      precio: "$550 MXN",
-      inicio: "16 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Bases de la neuroplasticidad",
-        "Mecanismos de aprendizaje motor",
-        "Aplicación clínica en terapia física",
-        "Estrategias de rehabilitación neurológica",
-        "Evaluación y seguimiento del paciente"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso4.jpg",
-      nombre: "Yoga para la Flexibilidad y Fuerza Corporal", categoria: "Bienestar",
-      ponente: "FisioTeck",
-      precio: "$550 MXN",
-      inicio: "16 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Fundamentos del yoga terapéutico",
-        "Posturas para flexibilidad",
-        "Secuencias de fortalecimiento",
-        "Respiración y control corporal",
-        "Adaptaciones para rehabilitación"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso5.jpg",
-      nombre: "Terapia Manual Ortopédica Funcional", categoria: "Ortopédica",
-      ponente: "Lic. Erika Laura Morales",
-      precio: "$550 MXN",
-      inicio: "16 de Marzo",
-      modalidad: "Online / Grabados · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Clases grabadas"],
-      temario: [
-        "Evaluación ortopédica funcional",
-        "Técnicas de terapia manual",
-        "Movilización articular",
-        "Tejidos blandos y miofascial",
-        "Aplicación clínica por regiones"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso6.jpg",
-      nombre: "Anatomía Funcional y Biomecánica Aplicada en el Deporte", categoria: "Deportiva",
-      ponente: "Lic. Elizabeth Mercado Reyes",
-      precio: "$550 MXN",
-      inicio: "16 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Anatomía del aparato locomotor",
-        "Principios biomecánicos",
-        "Análisis del movimiento deportivo",
-        "Lesiones deportivas frecuentes",
-        "Prevención y readaptación"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso7.jpg",
-      nombre: "Ejercicio Terapéutico en Embarazo y Postparto", categoria: "Embarazo",
-      ponente: "LTF. Elisabet Mercado Reyes",
-      precio: "$550 MXN",
-      inicio: "16 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Cambios fisiológicos en el embarazo",
-        "Ejercicio seguro por trimestre",
-        "Suelo pélvico y core",
-        "Recuperación postparto",
-        "Contraindicaciones y precauciones"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso8.jpg",
-      nombre: "Rehabilitación con Tecnología y Sensores", categoria: "Neurológica",
-      ponente: "LFT. Ricardo Eleazar Garcia Sanchez",
-      precio: "$550 MXN",
-      inicio: "23 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Tecnología aplicada a la rehabilitación",
-        "Sensores y dispositivos wearables",
-        "Realidad virtual en fisioterapia",
-        "Evaluación con herramientas digitales",
-        "Casos clínicos con tecnología"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso9.jpg",
-      nombre: "Ejercicio Terapéutico Funcional en Rehabilitación", categoria: "Ortopédica",
-      ponente: "Lic. Mauricio Chávez Ramírez",
-      precio: "$550 MXN",
-      inicio: "23 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Principios del ejercicio terapéutico",
-        "Evaluación funcional del paciente",
-        "Programación de ejercicios",
-        "Progresión y carga terapéutica",
-        "Aplicación en diferentes patologías"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso10.jpg",
-      nombre: "Rehabilitación Postoperatoria de Prótesis en Cadera y Rodilla", categoria: "Ortopédica",
-      ponente: "Lic. Erika Romero Luna",
-      precio: "$550 MXN",
-      inicio: "23 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Biomecánica de cadera y rodilla",
-        "Protocolo postoperatorio temprano",
-        "Fases de rehabilitación",
-        "Ejercicios de fortalecimiento progresivo",
-        "Retorno a la funcionalidad"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso11.jpg",
-      nombre: "Entrenamiento Hipopresivo", categoria: "Bienestar",
-      ponente: "Lic. Wendy Pérez Saenz",
-      precio: "$550 MXN",
-      inicio: "23 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Fundamentos del método hipopresivo",
-        "Anatomía del suelo pélvico",
-        "Técnica respiratoria y apnea",
-        "Posturas y progresiones",
-        "Indicaciones y contraindicaciones"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso12.jpg",
-      nombre: "Hipoterapia y la Rehabilitación Infantil", categoria: "Infantil",
-      ponente: "LFT. Efraín Darío Moreno Rodríguez",
-      precio: "$550 MXN",
-      inicio: "23 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Fundamentos de hipoterapia",
-        "Beneficios en rehabilitación infantil",
-        "Patologías que responden al tratamiento",
-        "Técnicas y posicionamiento en el caballo",
-        "Seguridad y protocolos de sesión"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso13.jpg",
-      nombre: "Rehabilitación Cardiopulmonar Tratamiento Fisioterapéutico", categoria: "Cardiopulmonar",
-      ponente: "LFT. Ricardo Eleazar Garcia Sanchez",
-      precio: "$550 MXN",
-      inicio: "23 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Anatomía y fisiología cardiopulmonar",
-        "Patologías cardíacas y respiratorias",
-        "Evaluación del paciente cardiopulmonar",
-        "Técnicas de fisioterapia respiratoria",
-        "Programa de rehabilitación cardiaca"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso14.jpg",
-      nombre: "Biomecánica Aplicada al Gesto Deportivo", categoria: "Deportiva",
-      ponente: "Lic. Domingo Sánchez Arellano",
-      precio: "$550 MXN",
-      inicio: "23 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Fundamentos de biomecánica deportiva",
-        "Análisis cinemático del movimiento",
-        "Fuerzas y palancas en el deporte",
-        "Optimización del gesto técnico",
-        "Prevención de lesiones deportivas"
-      ]
-    },
-    {
-      img: "assets/img/cursos/curso15.jpg",
-      nombre: "Intervención Temprana en Niños con Síndrome de Down", categoria: "Infantil",
-      ponente: "Lic. Lilia Marina Duque",
-      precio: "$550 MXN",
-      inicio: "23 de Marzo",
-      modalidad: "Online · Cupo limitado",
-      incluye: ["Certificado de reconocimiento", "Acceso online", "Material de apoyo"],
-      temario: [
-        "Características del Síndrome de Down",
-        "Desarrollo motor en la primera infancia",
-        "Estrategias de intervención temprana",
-        "Estimulación sensoriomotriz",
-        "Trabajo con familia y cuidadores"
-      ]
-    }
+    { img:"assets/img/cursos/curso1.jpg", nombre:"Neurodinamia en Rehabilitación de Lesiones", categoria:"Neurológica", ponente:"Lic. Erika Romero Luna", precio:"$550 MXN", inicio:"16 de Marzo", modalidad:"Online · Cupo limitado", temario:["Fundamentos de neurodinamia","Evaluación del sistema nervioso","Técnicas de movilización neural","Aplicación en lesiones musculoesqueléticas","Casos clínicos y práctica"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso2.jpg", nombre:"Barrel: Flexibilidad y Fuerza para Transformar tu Cuerpo", categoria:"Bienestar", ponente:"FisioTeck", precio:"$550 MXN", inicio:"16 de Marzo", modalidad:"Online · Cupo limitado", temario:["Introducción al método Barrel","Principios de flexibilidad y fuerza","Rutinas progresivas con barrel","Corrección postural y alineación","Planificación de sesiones"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso3.jpg", nombre:"Principios de Neuroplasticidad a la Terapia Física", categoria:"Neurológica", ponente:"Lic. Elizabeth Pozos Alvarado", precio:"$550 MXN", inicio:"16 de Marzo", modalidad:"Online · Cupo limitado", temario:["Bases de la neuroplasticidad","Mecanismos de aprendizaje motor","Aplicación clínica en terapia física","Estrategias de rehabilitación neurológica","Evaluación y seguimiento"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso4.jpg", nombre:"Yoga para la Flexibilidad y Fuerza Corporal", categoria:"Bienestar", ponente:"FisioTeck", precio:"$550 MXN", inicio:"16 de Marzo", modalidad:"Online · Cupo limitado", temario:["Fundamentos del yoga terapéutico","Posturas para flexibilidad","Secuencias de fortalecimiento","Respiración y control corporal","Adaptaciones para rehabilitación"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso5.jpg", nombre:"Terapia Manual Ortopédica Funcional", categoria:"Ortopédica", ponente:"Lic. Erika Laura Morales", precio:"$550 MXN", inicio:"16 de Marzo", modalidad:"Online / Grabados · Cupo limitado", temario:["Evaluación ortopédica funcional","Técnicas de terapia manual","Movilización articular","Tejidos blandos y miofascial","Aplicación clínica por regiones"], incluye:["Certificado de reconocimiento","Acceso online","Clases grabadas"] },
+    { img:"assets/img/cursos/curso6.jpg", nombre:"Anatomía Funcional y Biomecánica Aplicada en el Deporte", categoria:"Deportiva", ponente:"Lic. Elizabeth Mercado Reyes", precio:"$550 MXN", inicio:"16 de Marzo", modalidad:"Online · Cupo limitado", temario:["Anatomía del aparato locomotor","Principios biomecánicos","Análisis del movimiento deportivo","Lesiones deportivas frecuentes","Prevención y readaptación"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso7.jpg", nombre:"Ejercicio Terapéutico en Embarazo y Postparto", categoria:"Embarazo", ponente:"LTF. Elisabet Mercado Reyes", precio:"$550 MXN", inicio:"16 de Marzo", modalidad:"Online · Cupo limitado", temario:["Cambios fisiológicos en el embarazo","Ejercicio seguro por trimestre","Suelo pélvico y core","Recuperación postparto","Contraindicaciones y precauciones"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso8.jpg", nombre:"Rehabilitación con Tecnología y Sensores", categoria:"Neurológica", ponente:"LFT. Ricardo Eleazar Garcia Sanchez", precio:"$550 MXN", inicio:"23 de Marzo", modalidad:"Online · Cupo limitado", temario:["Tecnología aplicada a la rehabilitación","Sensores y dispositivos wearables","Realidad virtual en fisioterapia","Evaluación con herramientas digitales","Casos clínicos con tecnología"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso9.jpg", nombre:"Ejercicio Terapéutico Funcional en Rehabilitación", categoria:"Ortopédica", ponente:"Lic. Mauricio Chávez Ramírez", precio:"$550 MXN", inicio:"23 de Marzo", modalidad:"Online · Cupo limitado", temario:["Principios del ejercicio terapéutico","Evaluación funcional del paciente","Programación de ejercicios","Progresión y carga terapéutica","Aplicación en diferentes patologías"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso10.jpg", nombre:"Rehabilitación Postoperatoria de Prótesis en Cadera y Rodilla", categoria:"Ortopédica", ponente:"Lic. Erika Romero Luna", precio:"$550 MXN", inicio:"23 de Marzo", modalidad:"Online · Cupo limitado", temario:["Biomecánica de cadera y rodilla","Protocolo postoperatorio temprano","Fases de rehabilitación","Ejercicios de fortalecimiento progresivo","Retorno a la funcionalidad"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso11.jpg", nombre:"Entrenamiento Hipopresivo", categoria:"Bienestar", ponente:"Lic. Wendy Pérez Saenz", precio:"$550 MXN", inicio:"23 de Marzo", modalidad:"Online · Cupo limitado", temario:["Fundamentos del método hipopresivo","Anatomía del suelo pélvico","Técnica respiratoria y apnea","Posturas y progresiones","Indicaciones y contraindicaciones"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso12.jpg", nombre:"Hipoterapia y la Rehabilitación Infantil", categoria:"Infantil", ponente:"LFT. Efraín Darío Moreno Rodríguez", precio:"$550 MXN", inicio:"23 de Marzo", modalidad:"Online · Cupo limitado", temario:["Fundamentos de hipoterapia","Beneficios en rehabilitación infantil","Patologías que responden al tratamiento","Técnicas y posicionamiento en el caballo","Seguridad y protocolos de sesión"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso13.jpg", nombre:"Rehabilitación Cardiopulmonar Tratamiento Fisioterapéutico", categoria:"Cardiopulmonar", ponente:"LFT. Ricardo Eleazar Garcia Sanchez", precio:"$550 MXN", inicio:"23 de Marzo", modalidad:"Online · Cupo limitado", temario:["Anatomía y fisiología cardiopulmonar","Patologías cardíacas y respiratorias","Evaluación del paciente cardiopulmonar","Técnicas de fisioterapia respiratoria","Programa de rehabilitación cardiaca"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso14.jpg", nombre:"Biomecánica Aplicada al Gesto Deportivo", categoria:"Deportiva", ponente:"Lic. Domingo Sánchez Arellano", precio:"$550 MXN", inicio:"23 de Marzo", modalidad:"Online · Cupo limitado", temario:["Fundamentos de biomecánica deportiva","Análisis cinemático del movimiento","Fuerzas y palancas en el deporte","Optimización del gesto técnico","Prevención de lesiones deportivas"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] },
+    { img:"assets/img/cursos/curso15.jpg", nombre:"Intervención Temprana en Niños con Síndrome de Down", categoria:"Infantil", ponente:"Lic. Lilia Marina Duque", precio:"$550 MXN", inicio:"23 de Marzo", modalidad:"Online · Cupo limitado", temario:["Características del Síndrome de Down","Desarrollo motor en la primera infancia","Estrategias de intervención temprana","Estimulación sensoriomotriz","Trabajo con familia y cuidadores"], incluye:["Certificado de reconocimiento","Acceso online","Material de apoyo"] }
   ],
-
-  // ---- GALERÍA ----
   galeria: [
-    "assets/img/galeria/foto1.jpg",
-    "assets/img/galeria/foto2.jpg",
-    "assets/img/galeria/foto3.jpg",
-    "assets/img/galeria/foto4.jpg",
-    "assets/img/galeria/foto5.jpg",
-    "assets/img/galeria/foto6.jpg",
-    "assets/img/galeria/foto7.jpg",
-    "assets/img/galeria/foto8.jpg"
+    "assets/img/galeria/foto1.jpg","assets/img/galeria/foto2.jpg","assets/img/galeria/foto3.jpg",
+    "assets/img/galeria/foto4.jpg","assets/img/galeria/foto5.jpg","assets/img/galeria/foto6.jpg",
+    "assets/img/galeria/foto7.jpg","assets/img/galeria/foto8.jpg"
   ],
-
-  // ---- OPINIONES / RESEÑAS (imágenes reales) ----
   opiniones: [
-    { img: "assets/img/resenas/resena1.png" },
-    { img: "assets/img/resenas/resena2.png" },
-    { img: "assets/img/resenas/resena3.png" },
-    { img: "assets/img/resenas/resena4.png" },
-    { img: "assets/img/resenas/resena5.png" },
-    { img: "assets/img/resenas/resena6.png" },
-    { img: "assets/img/resenas/resena7.png" },
-    { img: "assets/img/resenas/resena8.png" }
+    {img:"assets/img/resenas/resena1.png"},{img:"assets/img/resenas/resena2.png"},
+    {img:"assets/img/resenas/resena3.png"},{img:"assets/img/resenas/resena4.png"},
+    {img:"assets/img/resenas/resena5.png"},{img:"assets/img/resenas/resena6.png"},
+    {img:"assets/img/resenas/resena7.png"},{img:"assets/img/resenas/resena8.png"}
   ],
-
-  // ---- CONTACTO ----
   contacto: [
-    {
-      icon: "💬",
-      titulo: "WhatsApp",
-      descripcion: "+52 238 147 9365 · Atención directa y rápida",
-      btnTexto: "Escribir ahora",
-      url: "https://wa.me/522381479365?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos"
-    },
-    {
-      icon: "📘",
-      titulo: "Facebook",
-      descripcion: "FisioTec · Conoce novedades y publicaciones",
-      btnTexto: "Ver página",
-      url: "https://www.facebook.com/profile.php?id=61575818279014"
-    },
-    {
-      icon: "📸",
-      titulo: "Instagram",
-      descripcion: "@fisioteck · Síguenos en redes sociales",
-      btnTexto: "Ver perfil",
-      url: "https://www.instagram.com/odonteckconsulting/"
-    },
-    {
-      icon: "📧",
-      titulo: "Correo",
-      descripcion: "odontckconsul@gmail.com · Consultas e información",
-      btnTexto: "Enviar correo",
-      url: "mailto:odontckconsul@gmail.com"
-    }
+    { icon:"💬", titulo:"WhatsApp", descripcion:"+52 238 147 9365 · Atención directa", btnTexto:"Escribir ahora", url:"https://wa.me/522381479365?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos" },
+    { icon:"📘", titulo:"Facebook", descripcion:"FisioTec · Novedades y publicaciones", btnTexto:"Ver página", url:"https://www.facebook.com/profile.php?id=61575818279014" },
+    { icon:"📸", titulo:"Instagram", descripcion:"@fisioteck · Síguenos", btnTexto:"Ver perfil", url:"https://www.instagram.com/odonteckconsulting/" },
+    { icon:"📧", titulo:"Correo", descripcion:"odontckconsul@gmail.com", btnTexto:"Enviar correo", url:"mailto:odontckconsul@gmail.com" }
   ],
-
-  // ---- REDES SOCIALES (footer) ----
   redes: [
-    { label: "f",  url: "https://www.facebook.com/profile.php?id=61575818279014", title: "Facebook" },
-    { label: "ig", url: "https://www.instagram.com/odonteckconsulting/", title: "Instagram" },
-    { label: "wa", url: "https://wa.me/522381479365", title: "WhatsApp" }
+    { label:"f", url:"https://www.facebook.com/profile.php?id=61575818279014", title:"Facebook" },
+    { label:"ig", url:"https://www.instagram.com/odonteckconsulting/", title:"Instagram" },
+    { label:"wa", url:"https://wa.me/522381479365", title:"WhatsApp" }
   ],
-
-  // ---- FOOTER CONTACTO ----
   footerContacto: [
-    { texto: "📲 +52 238 147 9365", url: "https://wa.me/522381479365" },
-    { texto: "📧 odontckconsul@gmail.com", url: "mailto:odontckconsul@gmail.com" },
-    { texto: "📘 Facebook", url: "https://www.facebook.com/profile.php?id=61575818279014" }
+    { texto:"📲 +52 238 147 9365", url:"https://wa.me/522381479365" },
+    { texto:"📧 odontckconsul@gmail.com", url:"mailto:odontckconsul@gmail.com" },
+    { texto:"📘 Facebook", url:"https://www.facebook.com/profile.php?id=61575818279014" }
   ]
-
 };
