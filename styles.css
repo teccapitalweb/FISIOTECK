@@ -245,7 +245,7 @@ section { padding: 80px 24px; }
 .galeria-carousel-wrapper { overflow: hidden; }
 .galeria-carousel { display: flex; gap: 16px; transition: transform 0.4s ease; }
 .galeria-item {
-  min-width: 280px; flex-shrink: 0;
+  min-width: 220px; max-width: 220px; flex-shrink: 0;
   border-radius: 12px; overflow: hidden;
   aspect-ratio: 1/1; cursor: pointer; position: relative;
   box-shadow: var(--sombra);
@@ -304,6 +304,7 @@ section { padding: 80px 24px; }
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex; align-items: center; justify-content: center;
 }
+.opiniones-carousel-wrapper { touch-action: pan-y; }
 .opinion-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.45); }
 .opinion-card img {
   width: 100%; height: auto; display: block;
@@ -379,7 +380,8 @@ footer { background: var(--azul-dark); color: rgba(255,255,255,0.75); padding: 4
   .hero-stats { grid-template-columns: repeat(3,1fr); gap: 10px; }
   .stat-num { font-size: 1.5rem; }
   .nosotros-areas { grid-template-columns: 1fr; }
-  .opinion-card { min-width: 300px; }
+  .opinion-card { min-width: calc(100vw - 48px); max-width: calc(100vw - 48px); }
+  .opiniones-carousel { gap: 12px; }
   .curso-card { min-width: 240px; }
 }
 

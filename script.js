@@ -170,6 +170,15 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('op-next')?.addEventListener('click', () => { stopAuto(); opGoNext(); startAuto(); });
   document.getElementById('op-prev')?.addEventListener('click', () => { stopAuto(); opGoPrev(); startAuto(); });
 
+  // ---- SWIPE TÁCTIL: OPINIONES ----
+  let touchStartX = 0;
+  opC?.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; stopAuto(); }, { passive: true });
+  opC?.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { diff > 0 ? opGoNext() : opGoPrev(); }
+    startAuto();
+  }, { passive: true });
+
   // ---- MODAL CURSO ----
   window.openModal = function(i) {
     const c = DATA.cursos[i];
