@@ -31,13 +31,13 @@ const DATA = {
     "assets/img/galeria/foto7.jpg","assets/img/galeria/foto8.jpg"
   ],
   opiniones: [
-    {img:"assets/img/resenas/resena1.png"},{img:"assets/img/resenas/resena2.png"},
-    {img:"assets/img/resenas/resena3.png"},{img:"assets/img/resenas/resena4.png"},
-    {img:"assets/img/resenas/resena5.png"},{img:"assets/img/resenas/resena6.png"},
-    {img:"assets/img/resenas/resena7.png"},{img:"assets/img/resenas/resena8.png"}
+    {img:"assets/img/resenas/resena1.jpg"},{img:"assets/img/resenas/resena2.jpg"},
+    {img:"assets/img/resenas/resena3.jpg"},{img:"assets/img/resenas/resena4.jpg"},
+    {img:"assets/img/resenas/resena5.jpg"},{img:"assets/img/resenas/resena6.jpg"},
+    {img:"assets/img/resenas/resena7.jpg"},{img:"assets/img/resenas/resena8.jpg"}
   ],
   contacto: [
-    { icon:"💬", titulo:"WhatsApp", descripcion:"+52 238 147 9365 · Atención directa", btnTexto:"Escribir ahora", url:"https://wa.me/522381479365?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos" },
+    { icon:"💬", titulo:"WhatsApp", descripcion:"+52 1 238 147 8840 · Atención directa", btnTexto:"Escribir ahora", url:"https://wa.me/5212381478840?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos" },
     { icon:"📘", titulo:"Facebook", descripcion:"FisioTec · Novedades y publicaciones", btnTexto:"Ver página", url:"https://www.facebook.com/profile.php?id=61575818279014" },
     { icon:"📸", titulo:"Instagram", descripcion:"@fisioteck · Síguenos", btnTexto:"Ver perfil", url:"https://www.instagram.com/odonteckconsulting/" },
     { icon:"📧", titulo:"Correo", descripcion:"odontckconsul@gmail.com", btnTexto:"Enviar correo", url:"mailto:odontckconsul@gmail.com" }
@@ -45,10 +45,10 @@ const DATA = {
   redes: [
     { label:"f", url:"https://www.facebook.com/profile.php?id=61575818279014", title:"Facebook" },
     { label:"ig", url:"https://www.instagram.com/odonteckconsulting/", title:"Instagram" },
-    { label:"wa", url:"https://wa.me/522381479365", title:"WhatsApp" }
+    { label:"wa", url:"https://wa.me/5212381478840", title:"WhatsApp" }
   ],
   footerContacto: [
-    { texto:"📲 +52 238 147 9365", url:"https://wa.me/522381479365" },
+    { texto:"📲 +52 1 238 147 8840", url:"https://wa.me/5212381478840" },
     { texto:"📧 odontckconsul@gmail.com", url:"mailto:odontckconsul@gmail.com" },
     { texto:"📘 Facebook", url:"https://www.facebook.com/profile.php?id=61575818279014" }
   ]

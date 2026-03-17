@@ -39,7 +39,7 @@ a{text-decoration:none}
 
 /* HERO */
 #inicio{padding-top:70px;min-height:100vh;background:linear-gradient(135deg,#0e2257 0%,#1A3E8F 45%,#1a6e7a 100%);display:flex;align-items:center;position:relative;overflow:hidden}
-#inicio::before{content:'';position:absolute;inset:0;background:url('assets/img/banner/banner.png') center/cover no-repeat;opacity:0.15}
+#inicio::before{content:'';position:absolute;inset:0;background:url('assets/img/banner/banner.jpg') center/cover no-repeat;opacity:0.15}
 .hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 24px 60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
 .hero-tag{background:rgba(29,184,152,0.25);color:#7ff5e0;font-family:'Exo 2',sans-serif;font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:20px;border:1px solid rgba(29,184,152,0.4);text-transform:uppercase;letter-spacing:0.5px}

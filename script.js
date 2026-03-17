@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modal-precio').textContent = c.precio;
     document.getElementById('modal-inicio').textContent = '📅 Inicia: ' + c.inicio;
     document.getElementById('modal-modalidad').textContent = c.modalidad;
-    document.getElementById('modal-btn-wa').href = `https://wa.me/522381479365?text=Hola,%20me%20interesa%20el%20curso:%20${encodeURIComponent(c.nombre)}`;
+    document.getElementById('modal-btn-wa').href = `https://wa.me/5212381478840?text=Hola,%20me%20interesa%20el%20curso:%20${encodeURIComponent(c.nombre)}`;
     document.getElementById('modal-temario').innerHTML = c.temario.map(t => `<li>${t}</li>`).join('');
     document.getElementById('modal-incluye').innerHTML = c.incluye.map(t => `<li>${t}</li>`).join('');
     document.getElementById('modal-overlay').classList.add('open');
