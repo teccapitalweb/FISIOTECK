@@ -38,18 +38,18 @@ const DATA = {
   ],
   contacto: [
     { icon:"💬", titulo:"WhatsApp", descripcion:"+52 1 238 147 8840 · Atención directa", btnTexto:"Escribir ahora", url:"https://wa.me/5212381478840?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos" },
-    { icon:"📘", titulo:"Facebook", descripcion:"FisioTec · Novedades y publicaciones", btnTexto:"Ver página", url:"https://www.facebook.com/profile.php?id=61575818279014" },
-    { icon:"📸", titulo:"Instagram", descripcion:"@fisioteck · Síguenos", btnTexto:"Ver perfil", url:"https://www.instagram.com/odonteckconsulting/" },
-    { icon:"📧", titulo:"Correo", descripcion:"odontckconsul@gmail.com", btnTexto:"Enviar correo", url:"mailto:odontckconsul@gmail.com" }
+    { icon:"📘", titulo:"Facebook", descripcion:"FisioTec · Novedades y publicaciones", btnTexto:"Ver página", url:"https://www.facebook.com/profile.php?id=61578034067438" },
+    { icon:"📸", titulo:"Instagram", descripcion:"@fisioteck · Síguenos", btnTexto:"Ver perfil", url:"https://www.instagram.com/fisioteccc/" },
+    { icon:"📧", titulo:"Correo", descripcion:"fisiotecmexico@gmail.com", btnTexto:"Enviar correo", url:"mailto:fisiotecmexico@gmail.com" }
   ],
   redes: [
-    { label:"f", url:"https://www.facebook.com/profile.php?id=61575818279014", title:"Facebook" },
-    { label:"ig", url:"https://www.instagram.com/odonteckconsulting/", title:"Instagram" },
+    { label:"f", url:"https://www.facebook.com/profile.php?id=61578034067438", title:"Facebook" },
+    { label:"ig", url:"https://www.instagram.com/fisioteccc/", title:"Instagram" },
     { label:"wa", url:"https://wa.me/5212381478840", title:"WhatsApp" }
   ],
   footerContacto: [
     { texto:"📲 +52 1 238 147 8840", url:"https://wa.me/5212381478840" },
-    { texto:"📧 odontckconsul@gmail.com", url:"mailto:odontckconsul@gmail.com" },
-    { texto:"📘 Facebook", url:"https://www.facebook.com/profile.php?id=61575818279014" }
+    { texto:"📧 fisiotecmexico@gmail.com", url:"mailto:fisiotecmexico@gmail.com" },
+    { texto:"📘 Facebook", url:"https://www.facebook.com/profile.php?id=61578034067438" }
   ]
 };
