@@ -197,7 +197,7 @@
         <h3 style="font-size:1.1rem;font-weight:700;color:#1A2E28;margin-bottom:4px;margin-top:8px;">Plan Mensual</h3>
         <p style="font-size:.85rem;color:#6B7280;margin-bottom:20px;">Para quienes quieren empezar</p>
         <div style="margin-bottom:24px;">
-          <span style="font-size:3rem;font-weight:800;color:#1B3F6B;">$249</span>
+          <span style="font-size:3rem;font-weight:800;color:#1B3F6B;" id="landing-precio-mes">$249</span>
           <span style="font-size:1rem;color:#6B7280;"> MXN / mes</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px;">
@@ -215,12 +215,12 @@
       <div style="flex:1;min-width:280px;max-width:380px;background:#fff;border-radius:16px;padding:36px 28px;position:relative;box-shadow:0 8px 32px rgba(0,0,0,.15);border:2px solid #1B3F6B;">
         <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#1B3F6B;color:#fff;padding:5px 20px;border-radius:20px;font-size:.75rem;font-weight:700;letter-spacing:.5px;">MEJOR VALOR</div>
         <h3 style="font-size:1.1rem;font-weight:700;color:#1A2E28;margin-bottom:4px;margin-top:8px;">Plan Anual</h3>
-        <p style="font-size:.85rem;color:#6B7280;margin-bottom:20px;">Equivale a $167 MXN al mes</p>
+        <p style="font-size:.85rem;color:#6B7280;margin-bottom:20px;" id="landing-equivale">Equivale a $167 MXN al mes</p>
         <div style="margin-bottom:8px;">
-          <span style="font-size:3rem;font-weight:800;color:#1B3F6B;">$1,999</span>
+          <span style="font-size:3rem;font-weight:800;color:#1B3F6B;" id="landing-precio-ano">$1,999</span>
           <span style="font-size:1rem;color:#6B7280;"> MXN / año</span>
         </div>
-        <div style="display:inline-block;background:rgba(141,198,63,.1);color:#6BA023;padding:4px 14px;border-radius:20px;font-size:.8rem;font-weight:600;margin-bottom:24px;">Ahorra $989 MXN</div>
+        <div style="display:inline-block;background:rgba(141,198,63,.1);color:#6BA023;padding:4px 14px;border-radius:20px;font-size:.8rem;font-weight:600;margin-bottom:24px;" id="landing-ahorro">Ahorra $989 MXN</div>
         <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px;">
           <div style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#1A2E28;"><span style="color:#8DC63F;">✓</span> Todo lo del plan mensual</div>
           <div style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#1A2E28;"><span style="color:#8DC63F;">✓</span> Acceso por 12 meses completos</div>
@@ -318,5 +318,32 @@
 
 <script src="data.js"></script>
 <script src="script.js"></script>
+<script>
+// ═══ PRECIOS DINÁMICOS DE LA MEMBRESÍA (Firestore config/club vía REST, sin SDK) ═══
+// Los precios de las tarjetas se leen del mismo lugar que edita el admin del club.
+// Si Firestore no responde, se quedan los precios de respaldo del HTML.
+(function(){
+  fetch('https://firestore.googleapis.com/v1/projects/club-fisioteck/databases/(default)/documents/config/club')
+    .then(r => r.json())
+    .then(d => {
+      const f = (d && d.fields) || {};
+      const num = v => Number(v && (v.integerValue || v.doubleValue));
+      const precioMes = num(f.precioMes);
+      const precioAno = num(f.precioAno);
+      if (!(precioMes > 0) || !(precioAno > 0)) return;
+
+      const ahorro = Math.max(0, (precioMes * 12) - precioAno);
+      const equivale = Math.round(precioAno / 12);
+      const fmt = n => n.toLocaleString('es-MX');
+      const setTxt = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
+
+      setTxt('landing-precio-mes', '$' + fmt(precioMes));
+      setTxt('landing-precio-ano', '$' + fmt(precioAno));
+      setTxt('landing-equivale', 'Equivale a $' + fmt(equivale) + ' MXN al mes');
+      setTxt('landing-ahorro', 'Ahorra $' + fmt(ahorro) + ' MXN');
+    })
+    .catch(() => { /* fallback: precios del HTML */ });
+})();
+</script>
 </body>
 </html>
