@@ -58,22 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // OPINIONES
   const opEl = document.getElementById('opiniones-carousel');
   if (opEl) DATA.opiniones.forEach((o, i) => {
-    opEl.innerHTML += `
-      <article class="opinion-card" style="--op-accent:${o.color}">
-        <div class="opinion-card-top">
-          <img class="opinion-avatar" src="${o.avatar}" alt="Avatar ilustrado de ${o.nombre}" loading="lazy"/>
-          <div class="opinion-author">
-            <h3>${o.nombre}</h3>
-            <span>${o.fecha}</span>
-          </div>
-          <div class="opinion-quote-mark" aria-hidden="true">“</div>
-        </div>
-        <blockquote>${o.comentario}</blockquote>
-        <div class="opinion-card-footer">
-          <span class="opinion-recommend"><span aria-hidden="true">✓</span> Recomienda FisioTeck</span>
-          <span class="opinion-source">Opinión real · Facebook</span>
-        </div>
-      </article>`;
+    opEl.innerHTML += `<div class="opinion-card"><img src="${o.img}" alt="Reseña ${i+1}" loading="lazy"/></div>`;
   });
 
   // CONTACTO

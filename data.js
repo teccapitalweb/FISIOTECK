@@ -31,14 +31,10 @@ const DATA = {
     "assets/img/galeria/foto7.jpg","assets/img/galeria/foto8.jpg"
   ],
   opiniones: [
-    { avatar:"assets/img/testimonios/avatar-01.webp", nombre:"Ale Muro", fecha:"4 sep 2025", comentario:"Información actualizada, de buena calidad y siempre atentos a las dudas que puedan surgir. ¡Respuestas al instante!", color:"#32D6B5" },
-    { avatar:"assets/img/testimonios/avatar-02.webp", nombre:"Ineraj Hernandez", fecha:"4 sep 2025", comentario:"Información muy interesante, actualizada y de calidad, además de un servicio excelente.", color:"#5DB7E8" },
-    { avatar:"assets/img/testimonios/avatar-03.webp", nombre:"Chapo Rangel", fecha:"4 sep 2025", comentario:"Excelentes cursos, nos ayudan a seguir preparándonos y mantenernos actualizados.", color:"#78D9F4" },
-    { avatar:"assets/img/testimonios/avatar-04.webp", nombre:"Luna Mary Sol", fecha:"4 sep 2025", comentario:"Es una página de aportes importantes que nos ayuda a complementar conocimientos; además, los cursos que brinda son 100% recomendables.", color:"#9B8AFB" },
-    { avatar:"assets/img/testimonios/avatar-05.webp", nombre:"Jhosh Iah-hel", fecha:"4 sep 2025", comentario:"Conozco mucho de la página y es una oportunidad para aprender y conocer más; una nueva forma de prepararse.", color:"#58D2D4" },
-    { avatar:"assets/img/testimonios/avatar-06.webp", nombre:"Azul Messina", fecha:"15 sep 2025", comentario:"Muy buenas certificaciones.", color:"#B19AF7" },
-    { avatar:"assets/img/testimonios/avatar-07.webp", nombre:"Clau Cobos", fecha:"12 dic 2025", comentario:"Excelente página y cursos muy buenos y accesibles. 100% recomendable.", color:"#2EB7C6" },
-    { avatar:"assets/img/testimonios/avatar-08.webp", nombre:"Laura Nazaretty Mariaca", fecha:"12 dic 2025", comentario:"Me gustan sus clases: son entendibles y me ayudan a comprender mejor los diferentes temas anatómicos.", color:"#82D4C8" }
+    {img:"assets/img/resenas/resena1.jpg"},{img:"assets/img/resenas/resena2.jpg"},
+    {img:"assets/img/resenas/resena3.jpg"},{img:"assets/img/resenas/resena4.jpg"},
+    {img:"assets/img/resenas/resena5.jpg"},{img:"assets/img/resenas/resena6.jpg"},
+    {img:"assets/img/resenas/resena7.jpg"},{img:"assets/img/resenas/resena8.jpg"}
   ],
   contacto: [
     { icon:"assets/img/brands/whatsapp.svg", color:"#25D366", titulo:"WhatsApp", descripcion:"+52 1 238 147 8840 · Atención directa", btnTexto:"Escribir ahora", url:"https://wa.me/5212381478840?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos" },
