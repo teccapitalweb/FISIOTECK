@@ -160,38 +160,34 @@
   <div class="section-inner club-inner">
     <div class="club-copy reveal">
       <div class="section-tag club-tag">Club FisioTeck</div>
-      <p class="club-kicker">Tu primera clase corre por nuestra cuenta</p>
-      <h2 class="section-title white club-title">Entra, explora y aprende.<br/><span>Decide después.</span></h2>
-      <p class="section-desc white-desc club-desc">Crea tu cuenta sin tarjeta, conoce los 15 cursos y reproduce gratis la primera clase de cada uno. La membresía aparece solamente cuando quieres continuar.</p>
+      <p class="club-kicker">Formación clínica en un solo lugar</p>
+      <h2 class="section-title white club-title">Aprende, consulta y<br/><span>lleva más a tu práctica.</span></h2>
+      <p class="section-desc white-desc club-desc">Un espacio profesional para descubrir nuevas técnicas, reforzar conocimientos y acceder a recursos que puedes utilizar en tu consulta.</p>
       <div class="club-trust" aria-label="Beneficios de acceso gratuito">
-        <div><span>✓</span><strong>Sin tarjeta para entrar</strong></div>
-        <div><span>✓</span><strong>Primera clase gratis</strong></div>
-        <div><span>✓</span><strong>Todos los cursos visibles</strong></div>
+        <div><span>✓</span><strong>15+ cursos disponibles</strong></div>
+        <div><span>✓</span><strong>Primera clase gratuita</strong></div>
+        <div><span>✓</span><strong>Recursos para tu práctica</strong></div>
       </div>
       <div class="club-actions">
-        <a class="club-btn-primary" href="https://club.fisioteck.com/?mode=register">Crear cuenta gratis</a>
-        <a class="club-btn-secondary" href="https://club.fisioteck.com/?mode=login">Ya tengo cuenta</a>
+        <a class="club-btn-primary" href="https://club.fisioteck.com/?mode=login">Entrar al Club</a>
       </div>
-      <p class="club-fineprint">Registro gratuito · sin permanencia · pago seguro sólo si decides continuar</p>
+      <p class="club-fineprint">Explora el catálogo y conoce la primera clase antes de continuar.</p>
     </div>
 
     <div class="club-access-card reveal">
       <div class="club-card-head">
-        <span class="club-card-badge">Así funciona</span>
-        <h3>Primero compruebas el valor</h3>
-        <p>El acceso no comienza con un cobro: comienza con una muestra real del contenido.</p>
+        <span class="club-card-badge">Todo en tu Club</span>
+        <h3>Más que una biblioteca de cursos</h3>
+        <p>Contenido y herramientas diseñadas para acompañar tu crecimiento profesional.</p>
       </div>
-      <ol class="club-steps">
-        <li><span>1</span><div><strong>Crea tu cuenta gratis</strong><small>Nombre, correo y contraseña. Nada de tarjeta.</small></div></li>
-        <li><span>2</span><div><strong>Explora los 15 cursos</strong><small>Consulta temarios, clases y recursos disponibles.</small></div></li>
-        <li><span>3</span><div><strong>Mira la primera clase</strong><small>Cada curso incluye una vista previa completa.</small></div></li>
-        <li class="club-step-premium"><span>4</span><div><strong>Desbloquea sólo si te convence</strong><small>Desde <b id="landing-precio-mes">$249</b> MXN/mes o <b id="landing-precio-ano">$1,999</b> MXN/año.</small></div></li>
-      </ol>
-      <div class="club-unlock-list">
-        <span>Clases restantes</span><span>PDF y materiales</span><span>Herramientas clínicas</span><span>Certificados</span>
+      <div class="club-benefits-grid">
+        <article><span>01</span><div><strong>Cursos especializados</strong><small>Fisioterapia, rehabilitación y aplicación clínica.</small></div></article>
+        <article><span>02</span><div><strong>Clases y sesiones</strong><small>Contenido grabado y encuentros profesionales en línea.</small></div></article>
+        <article><span>03</span><div><strong>Material de apoyo</strong><small>PDF, guías y recursos para reforzar cada tema.</small></div></article>
+        <article><span>04</span><div><strong>Herramientas clínicas</strong><small>Recursos prácticos para utilizar durante la consulta.</small></div></article>
+        <article><span>05</span><div><strong>Certificados</strong><small>Reconocimiento de los cursos que completes.</small></div></article>
+        <article><span>06</span><div><strong>Beneficios exclusivos</strong><small>Novedades, comunidad y ventajas para miembros.</small></div></article>
       </div>
-      <span id="landing-equivale" hidden>Equivale a $167 MXN al mes</span>
-      <span id="landing-ahorro" hidden>Ahorra $989 MXN</span>
     </div>
   </div>
 </section>
@@ -273,32 +269,5 @@
 
 <script src="data.js"></script>
 <script src="script.js"></script>
-<script>
-// ═══ PRECIOS DINÁMICOS DE LA MEMBRESÍA (Firestore config/club vía REST, sin SDK) ═══
-// Los precios de las tarjetas se leen del mismo lugar que edita el admin del club.
-// Si Firestore no responde, se quedan los precios de respaldo del HTML.
-(function(){
-  fetch('https://firestore.googleapis.com/v1/projects/club-fisioteck/databases/(default)/documents/config/club')
-    .then(r => r.json())
-    .then(d => {
-      const f = (d && d.fields) || {};
-      const num = v => Number(v && (v.integerValue || v.doubleValue));
-      const precioMes = num(f.precioMes);
-      const precioAno = num(f.precioAno);
-      if (!(precioMes > 0) || !(precioAno > 0)) return;
-
-      const ahorro = Math.max(0, (precioMes * 12) - precioAno);
-      const equivale = Math.round(precioAno / 12);
-      const fmt = n => n.toLocaleString('es-MX');
-      const setTxt = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
-
-      setTxt('landing-precio-mes', '$' + fmt(precioMes));
-      setTxt('landing-precio-ano', '$' + fmt(precioAno));
-      setTxt('landing-equivale', 'Equivale a $' + fmt(equivale) + ' MXN al mes');
-      setTxt('landing-ahorro', 'Ahorra $' + fmt(ahorro) + ' MXN');
-    })
-    .catch(() => { /* fallback: precios del HTML */ });
-})();
-</script>
 </body>
 </html>

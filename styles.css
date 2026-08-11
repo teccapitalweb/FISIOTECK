@@ -135,17 +135,19 @@ section{padding:80px 24px}
 .opinion-card img{width:100%;height:auto;display:block;border-radius:10px}
 
 /* CONTACTO */
-#contacto{background:var(--gris-claro)}
+#contacto{background:radial-gradient(circle at 50% 0,rgba(29,184,152,.08),transparent 34%),linear-gradient(180deg,#f6f9fd 0%,#eef3f9 100%)}
 .contacto-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.contacto-card{background:#fff;border-radius:20px;padding:28px 22px;box-shadow:0 10px 34px rgba(26,62,143,.09);text-align:left;transition:transform .3s,box-shadow .3s;border:1px solid #e4ebf6;position:relative;overflow:hidden}
-.contacto-card::after{content:'';position:absolute;inset:auto 0 0;height:4px;background:var(--brand-color,var(--verde));transform:scaleX(.35);transform-origin:left;transition:transform .3s ease}
-.contacto-card:hover{transform:translateY(-6px);box-shadow:var(--sombra-hover)}
+.contacto-card{background:rgba(255,255,255,.92);border-radius:22px;padding:27px 24px 25px;box-shadow:0 14px 38px rgba(26,62,143,.075);text-align:left;transition:transform .3s,box-shadow .3s,border-color .3s;border:1px solid rgba(211,224,240,.9);position:relative;overflow:hidden;isolation:isolate}
+.contacto-card::before{content:'';position:absolute;width:120px;height:120px;right:-60px;top:-62px;border-radius:50%;background:var(--brand-color,var(--verde));opacity:.07;z-index:-1;transition:transform .35s ease,opacity .35s ease}
+.contacto-card::after{content:'';position:absolute;inset:auto 24px 0;height:3px;border-radius:4px 4px 0 0;background:var(--brand-color,var(--verde));transform:scaleX(.28);transform-origin:left;transition:transform .3s ease}
+.contacto-card:hover{transform:translateY(-6px);box-shadow:0 20px 46px rgba(26,62,143,.13);border-color:color-mix(in srgb,var(--brand-color) 28%,#d3e0f0)}
+.contacto-card:hover::before{transform:scale(1.18);opacity:.1}
 .contacto-card:hover::after{transform:scaleX(1)}
-.contacto-icon{width:58px;height:58px;border-radius:16px;background:#f7f9fd;border:1px solid #e8eef7;display:flex;align-items:center;justify-content:center;margin:0 0 18px}
-.contacto-icon img{width:32px;height:32px;object-fit:contain}
-.contacto-card h3{font-family:'Exo 2',sans-serif;font-weight:700;color:var(--azul);font-size:1.05rem;margin-bottom:6px}
-.contacto-card p{color:var(--gris-texto);font-size:.84rem;line-height:1.55;min-height:42px;margin-bottom:18px}
-.contacto-card a{display:inline-flex;align-items:center;gap:8px;color:var(--azul);font-family:'Exo 2',sans-serif;font-weight:700;font-size:.85rem;transition:color .2s}
+.contacto-icon{width:60px;height:60px;border-radius:18px;background:#fff;border:1px solid #e4ebf4;box-shadow:0 8px 20px rgba(35,69,105,.08);display:flex;align-items:center;justify-content:center;margin:0 0 19px}
+.contacto-icon img{width:34px;height:34px;object-fit:contain}
+.contacto-card h3{font-family:'Exo 2',sans-serif;font-weight:800;color:var(--azul);font-size:1.06rem;margin-bottom:7px}
+.contacto-card p{color:var(--gris-texto);font-size:.84rem;line-height:1.55;min-height:42px;margin-bottom:17px}
+.contacto-card a{display:inline-flex;align-items:center;gap:8px;color:var(--azul);font-family:'Exo 2',sans-serif;font-weight:800;font-size:.84rem;transition:color .2s}
 .contacto-card a::after{content:'→';transition:transform .2s ease}
 .contacto-card a:hover{color:var(--brand-color,var(--verde))}
 .contacto-card a:hover::after{transform:translateX(4px)}
@@ -163,27 +165,22 @@ section{padding:80px 24px}
 .club-trust div{display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);border-radius:999px;color:#fff;font-size:.8rem}
 .club-trust span{width:20px;height:20px;border-radius:50%;background:rgba(29,184,152,.18);color:#7ff5e0;display:grid;place-items:center;font-weight:900}
 .club-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.club-btn-primary,.club-btn-secondary{font-family:'Exo 2',sans-serif;font-size:.94rem;font-weight:800;padding:14px 24px;border-radius:12px;transition:transform .2s,background .2s,box-shadow .2s}
-.club-btn-primary{background:var(--verde);color:#fff;box-shadow:0 8px 28px rgba(29,184,152,.32)}
-.club-btn-primary:hover{background:var(--verde-dark);transform:translateY(-2px)}
-.club-btn-secondary{color:#fff;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06)}
-.club-btn-secondary:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.club-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Exo 2',sans-serif;font-size:.94rem;font-weight:800;padding:14px 25px;border-radius:12px;background:var(--verde);color:#fff;box-shadow:0 8px 28px rgba(29,184,152,.32);transition:transform .2s,background .2s,box-shadow .2s}
+.club-btn-primary::after{content:'→';font-size:1.1rem;transition:transform .2s}
+.club-btn-primary:hover{background:var(--verde-dark);transform:translateY(-2px);box-shadow:0 12px 32px rgba(29,184,152,.38)}
+.club-btn-primary:hover::after{transform:translateX(3px)}
 .club-fineprint{color:rgba(255,255,255,.48);font-size:.76rem;margin-top:15px}
 .club-access-card{background:rgba(255,255,255,.98);border:1px solid rgba(255,255,255,.55);border-radius:24px;padding:34px;box-shadow:0 24px 70px rgba(0,0,0,.28)}
 .club-card-head{padding-bottom:22px;border-bottom:1px solid #e4ebf4}
 .club-card-badge{display:inline-block;background:rgba(29,184,152,.11);color:var(--verde-dark);font-family:'Exo 2',sans-serif;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;border-radius:999px;padding:6px 11px;margin-bottom:13px}
 .club-card-head h3{font-family:'Exo 2',sans-serif;color:var(--azul);font-size:1.45rem;margin-bottom:7px}
 .club-card-head p{color:var(--gris-texto);font-size:.87rem;line-height:1.55}
-.club-steps{list-style:none;margin:24px 0;display:flex;flex-direction:column;gap:18px}
-.club-steps li{display:grid;grid-template-columns:38px 1fr;gap:13px;align-items:start}
-.club-steps>li>span{width:38px;height:38px;border-radius:12px;background:#edf3fb;color:var(--azul);display:grid;place-items:center;font-family:'Exo 2',sans-serif;font-weight:900}
-.club-steps strong{font-family:'Exo 2',sans-serif;color:#17243c;font-size:.92rem;display:block;margin:1px 0 3px}
-.club-steps small{color:#6c7586;font-size:.78rem;line-height:1.45;display:block}
-.club-step-premium{padding-top:18px;border-top:1px dashed #d8e2ee}
-.club-step-premium>span{background:var(--verde)!important;color:#fff!important}
-.club-step-premium b{color:var(--azul)}
-.club-unlock-list{display:flex;flex-wrap:wrap;gap:7px}
-.club-unlock-list span{padding:7px 10px;border-radius:8px;background:#f2f6fb;color:#526078;font-size:.72rem;font-weight:600}
+.club-benefits-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
+.club-benefits-grid article{display:grid;grid-template-columns:34px 1fr;gap:11px;align-items:start;padding:14px 13px;border-radius:14px;background:#f5f8fc;border:1px solid #e5edf6;transition:transform .2s,border-color .2s,background .2s}
+.club-benefits-grid article:hover{transform:translateY(-2px);border-color:#c9dce9;background:#fff}
+.club-benefits-grid article>span{width:34px;height:34px;border-radius:10px;background:rgba(29,184,152,.12);color:var(--verde-dark);display:grid;place-items:center;font-family:'Exo 2',sans-serif;font-size:.67rem;font-weight:900;letter-spacing:.04em}
+.club-benefits-grid strong{font-family:'Exo 2',sans-serif;color:#17243c;font-size:.82rem;display:block;margin:1px 0 3px}
+.club-benefits-grid small{color:#6c7586;font-size:.7rem;line-height:1.42;display:block}
 
 /* FOOTER */
 footer{background:var(--azul-dark);color:rgba(255,255,255,0.75);padding:48px 24px 24px}
@@ -269,8 +266,9 @@ footer{background:var(--azul-dark);color:rgba(255,255,255,0.75);padding:48px 24p
   .club-title{font-size:2.15rem}
   .club-access-card{padding:25px 20px;border-radius:20px}
   .club-actions{align-items:stretch;flex-direction:column}
-  .club-btn-primary,.club-btn-secondary{text-align:center;width:100%}
+  .club-btn-primary{text-align:center;width:100%}
   .club-trust{display:grid;grid-template-columns:1fr}
+  .club-benefits-grid{grid-template-columns:1fr}
   .contacto-cards{grid-template-columns:1fr}
   .contacto-card p{min-height:auto}
 }
