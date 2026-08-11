@@ -37,19 +37,19 @@ const DATA = {
     {img:"assets/img/resenas/resena7.jpg"},{img:"assets/img/resenas/resena8.jpg"}
   ],
   contacto: [
-    { icon:"💬", titulo:"WhatsApp", descripcion:"+52 1 238 147 8840 · Atención directa", btnTexto:"Escribir ahora", url:"https://wa.me/5212381478840?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos" },
-    { icon:"📘", titulo:"Facebook", descripcion:"FisioTec · Novedades y publicaciones", btnTexto:"Ver página", url:"https://www.facebook.com/profile.php?id=61578034067438" },
-    { icon:"📸", titulo:"Instagram", descripcion:"@fisioteck · Síguenos", btnTexto:"Ver perfil", url:"https://www.instagram.com/fisioteccc/" },
-    { icon:"📧", titulo:"Correo", descripcion:"fisiotecmexico@gmail.com", btnTexto:"Enviar correo", url:"mailto:fisiotecmexico@gmail.com" }
+    { icon:"assets/img/brands/whatsapp.svg", color:"#25D366", titulo:"WhatsApp", descripcion:"+52 1 238 147 8840 · Atención directa", btnTexto:"Escribir ahora", url:"https://wa.me/5212381478840?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos" },
+    { icon:"assets/img/brands/facebook.svg", color:"#1877F2", titulo:"Facebook", descripcion:"FisioTec · Novedades y publicaciones", btnTexto:"Ver página", url:"https://www.facebook.com/profile.php?id=61578034067438" },
+    { icon:"assets/img/brands/instagram.svg", color:"#E1306C", titulo:"Instagram", descripcion:"@fisioteccc · Comunidad FisioTeck", btnTexto:"Ver perfil", url:"https://www.instagram.com/fisioteccc/" },
+    { icon:"assets/img/brands/gmail.svg", color:"#EA4335", titulo:"Correo", descripcion:"fisiotecmexico@gmail.com", btnTexto:"Enviar correo", url:"mailto:fisiotecmexico@gmail.com" }
   ],
   redes: [
-    { label:"f", url:"https://www.facebook.com/profile.php?id=61578034067438", title:"Facebook" },
-    { label:"ig", url:"https://www.instagram.com/fisioteccc/", title:"Instagram" },
-    { label:"wa", url:"https://wa.me/5212381478840", title:"WhatsApp" }
+    { icon:"assets/img/brands/facebook.svg", url:"https://www.facebook.com/profile.php?id=61578034067438", title:"Facebook" },
+    { icon:"assets/img/brands/instagram.svg", url:"https://www.instagram.com/fisioteccc/", title:"Instagram" },
+    { icon:"assets/img/brands/whatsapp.svg", url:"https://wa.me/5212381478840", title:"WhatsApp" }
   ],
   footerContacto: [
-    { texto:"📲 +52 1 238 147 8840", url:"https://wa.me/5212381478840" },
-    { texto:"📧 fisiotecmexico@gmail.com", url:"mailto:fisiotecmexico@gmail.com" },
-    { texto:"📘 Facebook", url:"https://www.facebook.com/profile.php?id=61578034067438" }
+    { icon:"assets/img/brands/whatsapp.svg", texto:"+52 1 238 147 8840", url:"https://wa.me/5212381478840" },
+    { icon:"assets/img/brands/gmail.svg", texto:"fisiotecmexico@gmail.com", url:"mailto:fisiotecmexico@gmail.com" },
+    { icon:"assets/img/brands/facebook.svg", texto:"FisioTec en Facebook", url:"https://www.facebook.com/profile.php?id=61578034067438" }
   ]
 };

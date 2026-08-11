@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  const footerYear = document.getElementById('footer-year');
+  if (footerYear) footerYear.textContent = new Date().getFullYear();
+
   // ÁREAS
   const areasEl = document.getElementById('nosotros-areas');
   if (areasEl) DATA.areas.forEach(a => {
@@ -62,21 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactoEl = document.getElementById('contacto-cards');
   if (contactoEl) DATA.contacto.forEach(c => {
     contactoEl.innerHTML += `
-      <div class="contacto-card">
-        <div class="contacto-icon">${c.icon}</div>
+      <div class="contacto-card" style="--brand-color:${c.color}">
+        <div class="contacto-icon"><img src="${c.icon}" alt="" aria-hidden="true"/></div>
         <h3>${c.titulo}</h3><p>${c.descripcion}</p>
-        <a href="${c.url}" target="_blank">${c.btnTexto}</a>
+        <a href="${c.url}" target="_blank" rel="noopener noreferrer">${c.btnTexto}</a>
       </div>`;
   });
 
   // FOOTER
   const fsEl = document.getElementById('footer-social');
   if (fsEl) DATA.redes.forEach(r => {
-    fsEl.innerHTML += `<a href="${r.url}" target="_blank" title="${r.title}">${r.label}</a>`;
+    fsEl.innerHTML += `<a href="${r.url}" target="_blank" rel="noopener noreferrer" title="${r.title}" aria-label="${r.title}"><img src="${r.icon}" alt="" aria-hidden="true"/></a>`;
   });
   const fcEl = document.getElementById('footer-contacto-list');
   if (fcEl) DATA.footerContacto.forEach(fc => {
-    fcEl.innerHTML += `<li><a href="${fc.url}" target="_blank">${fc.texto}</a></li>`;
+    fcEl.innerHTML += `<li><a class="footer-contact-link" href="${fc.url}" target="_blank" rel="noopener noreferrer"><img src="${fc.icon}" alt="" aria-hidden="true"/>${fc.texto}</a></li>`;
   });
 
   // HAMBURGER
