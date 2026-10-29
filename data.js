@@ -1,11 +1,11 @@
 const DATA = {
   areas: [
-    { icon: "🧠", texto: "Rehabilitación Neurológica" },
-    { icon: "🏃", texto: "Fisioterapia Deportiva" },
-    { icon: "🦴", texto: "Rehabilitación Ortopédica" },
-    { icon: "👵", texto: "Geriatría Clínica" },
-    { icon: "📋", texto: "Dosificación de Cargas" },
-    { icon: "🎓", texto: "Certificación Avalada" }
+    { icon: "ic-network", texto: "Rehabilitación Neurológica" },
+    { icon: "ic-pulse", texto: "Fisioterapia Deportiva" },
+    { icon: "ic-move", texto: "Rehabilitación Ortopédica" },
+    { icon: "ic-heart", texto: "Geriatría Clínica" },
+    { icon: "ic-sliders", texto: "Dosificación de Cargas" },
+    { icon: "ic-award", texto: "Certificación Avalada" }
   ],
   categorias: ["Todos","Neurológica","Deportiva","Ortopédica","Embarazo","Infantil","Cardiopulmonar","Bienestar"],
   cursos: [
@@ -31,10 +31,14 @@ const DATA = {
     "assets/img/galeria/foto7.jpg","assets/img/galeria/foto8.jpg"
   ],
   opiniones: [
-    {img:"assets/img/resenas/resena1.jpg"},{img:"assets/img/resenas/resena2.jpg"},
-    {img:"assets/img/resenas/resena3.jpg"},{img:"assets/img/resenas/resena4.jpg"},
-    {img:"assets/img/resenas/resena5.jpg"},{img:"assets/img/resenas/resena6.jpg"},
-    {img:"assets/img/resenas/resena7.jpg"},{img:"assets/img/resenas/resena8.jpg"}
+    { nombre: "Ale M.", fecha: "4 de septiembre de 2025", texto: "Información actualizada, de buena calidad y siempre atentos a las dudas que puedan surgir, respuestas al instante." },
+    { nombre: "Ineraj H.", fecha: "4 de septiembre de 2025", texto: "Información muy interesante, actualizada y de calidad, además de un servicio excelente." },
+    { nombre: "Chapo R.", fecha: "4 de septiembre de 2025", texto: "Excelentes cursos, nos ayudan a seguir preparándonos y mantenernos actualizados." },
+    { nombre: "Luna Mary S.", fecha: "4 de septiembre de 2025", texto: "Es una página de aportes importantes que nos ayuda a complementar conocimientos además de los cursos que brinda. 100% recomendable." },
+    { nombre: "Jhosh L.", fecha: "4 de septiembre de 2025", texto: "Siento que es una oportunidad para aprender y conocer más, aparte de que es una nueva forma de prepararse." },
+    { nombre: "Azul M.", fecha: "15 de septiembre de 2025", texto: "Muy buenas certificaciones." },
+    { nombre: "Clau C.", fecha: "12 de diciembre de 2025", texto: "Excelente página y cursos muy buenos y accesibles. 100% recomendable." },
+    { nombre: "Laura N.", fecha: "12 de diciembre de 2025", texto: "Me gustan sus clases, están entendibles, me ayudan a comprender mejor los diferentes temas anatómicos." }
   ],
   contacto: [
     { icon:"assets/img/brands/whatsapp.svg", color:"#25D366", titulo:"WhatsApp", descripcion:"+52 1 238 147 8840 · Atención directa", btnTexto:"Escribir ahora", url:"https://wa.me/5212381478840?text=Hola,%20me%20interesa%20información%20sobre%20sus%20cursos" },

@@ -6,68 +6,262 @@
   <title>FisioTeck | Formación Constante, Resultados Excelentes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet"/>
+  <link rel="preload" as="image" href="assets/img/hero/hero-1.webp" fetchpriority="high"/>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="landing.css"/>
+  <link rel="stylesheet" href="registro.css"/>
+  <link rel="stylesheet" href="encuesta.css"/>
+  <link rel="stylesheet" href="secciones.css"/>
+  <link rel="stylesheet" href="extras.css"/>
+  <link rel="stylesheet" href="diseno2.css"/>
+  <link rel="stylesheet" href="canal.css"/>
+  <link rel="stylesheet" href="guia.css"/>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ic-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></symbol>
+    <symbol id="ic-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></symbol>
+    <symbol id="ic-cap" viewBox="0 0 24 24"><path d="M21.42 10.92 12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="ic-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol>
+    <symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+    <symbol id="ic-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="ic-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+    <symbol id="ic-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="ic-ur" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="ic-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+    <symbol id="ic-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></symbol>
+    <symbol id="ic-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="ic-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+    <symbol id="ic-chev-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="ic-chev-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="ic-pause" viewBox="0 0 24 24"><path d="M10 5v14M16 5v14"/></symbol>
+    <symbol id="ic-play" viewBox="0 0 24 24"><path d="m7 4 13 8-13 8z"/></symbol>
+    <symbol id="ic-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="ic-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="ic-network" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="4" r="2"/><circle cx="4.5" cy="18" r="2"/><circle cx="19.5" cy="18" r="2"/><path d="M12 6v3.5M10 13.6 6 16.6M14 13.6l4 3"/></symbol>
+    <symbol id="ic-pulse" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+    <symbol id="ic-move" viewBox="0 0 24 24"><path d="m5 9-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3M2 12h20M12 2v20"/></symbol>
+    <symbol id="ic-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="ic-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+    <symbol id="ic-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="ic-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="ic-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="ic-tag" viewBox="0 0 24 24"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><path d="M7 7h.01"/></symbol>
+    <symbol id="ic-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  </defs>
+</svg>
 
 <!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a class="nav-logo" href="#inicio">
-      <img src="assets/img/logo/logo.jpg" alt="FisioTeck"/>
+    <a class="nav-logo" href="#inicio" aria-label="FisioTeck, ir al inicio">
+      <img src="assets/img/logo/logo.jpg" alt="FisioTeck" width="168" height="46"/>
     </a>
     <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#cursos">Cursos</a></li>
-      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#certificacion">Certificación</a></li>
+      <li><a href="#preguntas">Preguntas</a></li>
       <li><a href="#opiniones">Opiniones</a></li>
-      <li><a href="https://club.fisioteck.com/?mode=login" class="nav-club-link" style="color:#1565C0;font-weight:700;">⭐ Club</a></li>
+      <li><a href="#club">Club</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a href="https://wa.me/5212381478840" target="_blank" class="nav-btn-wa">📲 WhatsApp</a></li>
+      <li><a href="https://club.fisioteck.com/?mode=login" class="nav-cta">Entrar al Club <svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
-    <a href="#inicio">Inicio</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#cursos">Cursos</a>
-    <a href="#galeria">Galería</a>
+    <a href="#certificacion">Certificación</a>
+    <a href="#preguntas">Preguntas</a>
     <a href="#opiniones">Opiniones</a>
-    <a href="https://club.fisioteck.com/?mode=login" style="color:#1565C0;font-weight:700;">⭐ Club</a>
+    <a href="#club">Club</a>
     <a href="#contacto">Contacto</a>
-    <a href="https://wa.me/5212381478840" target="_blank" class="nav-btn-wa mob-wa">📲 WhatsApp</a>
+    <a href="https://club.fisioteck.com/?mode=login" class="mob-cta">Entrar al Club <svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="inicio">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-tags">
-        <span class="hero-tag">Fisioterapia</span>
-        <span class="hero-tag">Rehabilitación</span>
-        <span class="hero-tag">Certificación</span>
-        <span class="hero-tag">Online</span>
-      </div>
-      <h1 class="hero-title">Formación <span>Constante</span>,<br/>Resultados Excelentes</h1>
+<section id="inicio" aria-label="Inicio">
+  <!-- Imágenes en assets/img/hero/ (ver PROMPTS-IMAGENES-LANDING.md). Si no existen, se usa el banner de respaldo. -->
+  <img class="hero-slide" data-src="assets/img/hero/hero-1.webp" alt="Fisioterapeuta valorando la espalda de un paciente en consulta" width="1920" height="1080" fetchpriority="high"/>
+  <img class="hero-slide" data-src="assets/img/hero/hero-2.webp" alt="Fisioterapeuta guiando un ejercicio de rehabilitación" width="1920" height="1080"/>
+  <img class="hero-slide" data-src="assets/img/hero/hero-3.webp" alt="Profesionales de la salud en una sesión de formación clínica" width="1920" height="1080"/>
+  <img class="hero-slide" data-src="assets/img/hero/hero-4.webp" alt="Fisioterapeuta usando tecnología de rehabilitación" width="1920" height="1080"/>
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Fisioterapia · Rehabilitación · En línea</p>
+      <h1 class="hero-title">Formación constante.<span>Resultados excelentes.</span></h1>
       <p class="hero-subtitle">Cursos especializados en fisioterapia y rehabilitación para profesionales de la salud que buscan actualización continua y certificación avalada.</p>
       <div class="hero-btns">
-        <a href="#cursos" class="btn-primary">Ver Cursos</a>
-        <a href="https://wa.me/5212381478840" target="_blank" class="btn-outline">Contactar por WhatsApp</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-card"><div class="stat-num" data-target="500">0</div><div class="stat-label">Alumnos capacitados</div></div>
-        <div class="stat-card"><div class="stat-num" data-target="30">0</div><div class="stat-label">Cursos especializados</div></div>
-        <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Formación garantizada</div></div>
+        <a href="https://club.fisioteck.com/?mode=login" class="btn-primary">Entrar al Club <svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></a>
+        <a href="#cursos" class="btn-outline">Explorar cursos</a>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="assets/img/banner/banner.jpg" alt="FisioTeck"/>
+  </div>
+  <div class="hero-markers" id="hero-markers" role="group" aria-label="Imágenes del hero"></div>
+  <button type="button" class="hero-pause" id="hero-pause" aria-pressed="false">Pausar imágenes</button>
+  <a class="hero-preview" href="https://club.fisioteck.com/?mode=register">
+    <span class="hero-preview-ico" aria-hidden="true"><svg class="ic"><use href="#ic-ur"/></svg></span>
+    <span><strong>Prueba gratuita</strong><small>Crea tu cuenta y elige un curso</small></span>
+  </a>
+  <svg class="hero-relief" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path class="hero-relief__back" d="M0 28C170 6 282 98 470 79S768 6 960 32s302 86 480 23v65H0Z"/>
+    <path class="hero-relief__middle" d="M0 51C198 14 315 119 525 90S822 30 1018 53s265 45 422 9v58H0Z"/>
+    <path class="hero-relief__front" d="M0 72C171 31 340 135 542 102S876 56 1057 77s272 26 383-8v51H0Z"/>
+  </svg>
+</section>
+
+<!-- ENCUESTA -->
+<section id="encuesta" class="zenc zenc--con-cara" aria-labelledby="zenc-q">
+  <div class="zenc__heading reveal">
+    <p class="zenc__eyebrow">Encuentra tu camino</p>
+    <h2>Una ruta de aprendizaje para ti.</h2>
+  </div>
+  <div class="zenc__inner">
+    <aside class="zenc__guia" aria-label="Guía de la encuesta">
+      <div class="zenc__nota" id="zenc-nota" role="status" aria-live="polite">
+        <strong id="zenc-nota-t">¡Hola! Te ayudo a empezar.</strong>
+        <span id="zenc-nota-c">Son preguntas rápidas: toma menos de un minuto. Es una guía programada, no una persona.</span>
+      </div>
+      <div class="zenc__cara" id="zenc-cara" aria-hidden="true"><img class="zenc__cara-img" id="zenc-cara-img" src="assets/img/guia/guia-bienvenida.webp" alt="" width="640" height="640" decoding="async" draggable="false"/></div>
+    </aside>
+    <div class="zenc__tarjeta" id="zenc-tarjeta">
+      <div class="zenc__top"><p class="zenc__paso" id="zenc-paso">Pregunta 1 de 8</p><div class="zenc__acciones" id="zenc-acciones"></div></div>
+      <div class="zenc__progreso" aria-hidden="true"><i id="zenc-barra"></i></div>
+      <h3 class="zenc__q" id="zenc-q" tabindex="-1"></h3>
+      <div class="zenc__cuerpo" id="zenc-cuerpo"></div>
     </div>
+  </div>
+</section>
+
+<!-- REGISTRO GRATIS -->
+<section class="registration-section" id="registro-gratis" aria-labelledby="registro-title">
+  <div class="registration-wrap">
+    <div class="registration-seal" aria-hidden="true"><div><span>NUEVO</span><strong>GRATIS</strong><small>SIN COSTO DE REGISTRO</small></div></div>
+  <div class="registration-layout">
+    <span class="reg-blob reg-blob--a" aria-hidden="true"></span><span class="reg-blob reg-blob--b" aria-hidden="true"></span><span class="reg-blob reg-blob--c" aria-hidden="true"></span>
+    <div class="registration-copy reveal">
+      <p class="reg-eyebrow">Empieza en FisioTeck</p>
+      <h2 id="registro-title">Crea tu cuenta<br/>completamente <em>gratis</em></h2>
+      <p>Regístrate, explora los cursos y elige tu <strong>prueba gratuita</strong>. Así puedes conocer la plataforma antes de continuar tu formación.</p>
+      <div class="registration-steps" role="group" aria-label="Pasos del registro">
+        <button type="button" class="registration-step is-active" data-step="0" aria-pressed="true"><span>01</span><strong>Crea tu cuenta<small>Tu punto de partida.</small></strong><i aria-hidden="true"><svg class="ic"><use href="#ic-ur"/></svg></i></button>
+        <button type="button" class="registration-step" data-step="1" aria-pressed="false"><span>02</span><strong>Accede a tu espacio<small>Tu cuenta personal de aprendizaje.</small></strong><i aria-hidden="true"><svg class="ic"><use href="#ic-ur"/></svg></i></button>
+        <button type="button" class="registration-step" data-step="2" aria-pressed="false"><span>03</span><strong>Elige tu curso de prueba<small>Explora las clases disponibles.</small></strong><i aria-hidden="true"><svg class="ic"><use href="#ic-ur"/></svg></i></button>
+      </div>
+      <div class="reg-actions">
+        <a class="registration-cta" href="https://club.fisioteck.com/?mode=register">Crear mi cuenta gratis <svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></a>
+        <a class="registration-login" href="https://club.fisioteck.com/?mode=login">Ya tengo una cuenta <svg class="ic" aria-hidden="true"><use href="#ic-arrow"/></svg></a>
+      </div>
+      <p class="reg-legal">Al crear tu cuenta aceptas los <a href="terminos-y-condiciones.html">Términos y condiciones</a> y el <a href="aviso-de-privacidad.html">Aviso de privacidad</a>.</p>
+    </div>
+    <div class="registration-demo reveal" id="registration-demo" data-step="0" aria-label="Demostración del registro, no es un formulario">
+      <span class="reg-chip reg-chip--1" aria-hidden="true"><svg class="ic"><use href="#ic-check"/></svg>Sin tarjeta</span><span class="reg-chip reg-chip--2" aria-hidden="true"><svg class="ic"><use href="#ic-award"/></svg>Certificado</span><span class="reg-chip reg-chip--3" aria-hidden="true"><svg class="ic"><use href="#ic-bolt"/></svg>Acceso inmediato</span>
+      <div class="registration-demo__top"><span>VISTA PREVIA DEL REGISTRO</span><button type="button" id="registration-pause" aria-pressed="false">Pausar animación</button></div>
+      <div class="registration-window" role="img" aria-label="Demostración con datos de ejemplo: captura de nombre, correo y contraseña, creación de cuenta y elección de un curso de prueba">
+        <div class="registration-browser-bar"><span aria-hidden="true"><i></i><i></i><i></i></span><strong>FISIOTECK / Registro</strong><span aria-hidden="true">◇</span></div>
+        <div class="registration-scene is-active" data-scene="0">
+          <div class="registration-mini-brand"><img src="assets/img/logo/logo.jpg" alt="" width="52" height="18"/>CLUB</div>
+          <h3>Crea tu cuenta</h3><p>Un acceso personal para aprender.</p>
+          <div class="registration-field"><span>Nombre completo</span><div class="registration-input"><b data-demo="name"></b><i class="registration-caret"></i></div></div>
+          <div class="registration-field"><span>Correo electrónico</span><div class="registration-input"><b data-demo="email"></b><i class="registration-caret"></i></div></div>
+          <div class="registration-field"><span>Contraseña</span><div class="registration-input"><b data-demo="password"></b><i class="registration-caret"></i></div></div>
+          <div class="registration-illustrated-action">Crear cuenta gratis <span><svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></span></div>
+        </div>
+        <div class="registration-scene" data-scene="1" aria-hidden="true">
+          <div class="registration-success-halo"><svg class="registration-check" viewBox="0 0 100 100" aria-hidden="true"><path d="m29 50 14 14 29-30"/></svg></div>
+          <h3>¡Cuenta creada!</h3><p style="margin:0">Ya tienes tu espacio en FisioTeck.<br/>El siguiente paso es elegir tu curso de prueba.</p>
+          <div class="registration-success-line"><span><svg class="ic" aria-hidden="true"><use href="#ic-check"/></svg></span> Acceso personal listo</div>
+        </div>
+        <div class="registration-scene" data-scene="2" aria-hidden="true">
+          <div class="registration-mini-brand"><img src="assets/img/logo/logo.jpg" alt="" width="52" height="18"/>CLUB</div>
+          <h3>Elige tu curso de prueba</h3><p>Explora un tema que te interese.</p>
+          <div class="registration-demo-courses">
+            <div class="registration-demo-course"><img src="assets/img/cursos/curso1.jpg" alt="" width="46" height="46" loading="lazy"/><span><strong>Neurodinamia en rehabilitación</strong><small>Neurológica</small></span><i><svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></i></div>
+            <div class="registration-demo-course registration-demo-course--sel"><img src="assets/img/cursos/curso5.jpg" alt="" width="46" height="46" loading="lazy"/><span><strong>Terapia manual ortopédica funcional</strong><small>Ortopédica</small></span><i><svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></i></div>
+            <div class="registration-demo-course"><img src="assets/img/cursos/curso6.jpg" alt="" width="46" height="46" loading="lazy"/><span><strong>Biomecánica aplicada al deporte</strong><small>Deportiva</small></span><i><svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></i></div>
+          </div>
+          <div class="registration-demo-toast"><span><svg class="ic" aria-hidden="true"><use href="#ic-check"/></svg></span> Tu curso de prueba está listo</div>
+        </div>
+        <div class="registration-progress" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
+      </div>
+      <div class="registration-demo__caption"><p id="registration-caption">Crea tu cuenta con tus datos.</p><span>Datos de ejemplo</span></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- CANAL DE WHATSAPP -->
+<section class="canal-sec" id="canal" aria-labelledby="canal-title">
+  <span class="canal-blob canal-blob--a" aria-hidden="true"></span><span class="canal-blob canal-blob--b" aria-hidden="true"></span>
+  <canvas class="canal-fx" id="canal-fx" aria-hidden="true"></canvas>
+  <div class="canal-inner">
+    <div class="canal-copy reveal">
+      <div class="section-tag canal-tag"><span class="tag-dot"></span>Canal de WhatsApp</div>
+      <h2 id="canal-title" class="section-title white">Únete al canal y <span>entérate primero</span></h2>
+      <p class="canal-lead">Recibe directo en tu WhatsApp lo que publicamos para la comunidad FisioTeck. Gratis y sin compromiso.</p>
+      <ul class="canal-feats">
+        <li><span class="canal-ico"><svg aria-hidden="true"><use href="#ic-tag"/></svg></span><div><strong>Ofertas y cupones</strong><small>Descuentos para cursos y membresía.</small></div></li>
+        <li><span class="canal-ico"><svg aria-hidden="true"><use href="#ic-play"/></svg></span><div><strong>Webinars gratuitos</strong><small>Sesiones en línea abiertas a todos.</small></div></li>
+        <li><span class="canal-ico"><svg aria-hidden="true"><use href="#ic-file"/></svg></span><div><strong>Material 100 % gratis</strong><small>Guías y recursos para tu práctica.</small></div></li>
+        <li><span class="canal-ico"><svg aria-hidden="true"><use href="#ic-bell"/></svg></span><div><strong>Novedades de cursos</strong><small>Fechas, cupos y nuevos programas.</small></div></li>
+      </ul>
+      <div class="canal-acc">
+        <a class="canal-btn" href="https://whatsapp.com/channel/0029VbCICRYDp2Q2iNyLe92e" target="_blank" rel="noopener noreferrer"><img src="assets/img/brands/whatsapp.svg" alt="" width="24" height="24"/>Unirme al canal <svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></a>
+        <span class="canal-nota">Puedes salir del canal cuando quieras.</span>
+      </div>
+    </div>
+
+    <div class="canal-demo reveal" id="canal-demo" aria-label="Demostración con mensajes de ejemplo: el canal de WhatsApp y los beneficios dentro del Club">
+      <span class="canal-chip canal-chip--1" aria-hidden="true"><svg class="ic"><use href="#ic-tag"/></svg>Cupones</span>
+      <span class="canal-chip canal-chip--2" aria-hidden="true"><svg class="ic"><use href="#ic-play"/></svg>Webinars</span>
+      <span class="canal-chip canal-chip--3" aria-hidden="true"><svg class="ic"><use href="#ic-file"/></svg>Material gratis</span>
+      <div class="phone" role="img" aria-label="Teléfono con el canal de FisioTeck y el Club">
+        <span class="phone__notch" aria-hidden="true"></span>
+        <div class="phone__screen">
+          <!-- Escena A: canal de WhatsApp -->
+          <div class="ph-scene ph-scene--a is-on" data-sc="a">
+            <div class="ph-head"><span class="ph-av"><img src="assets/img/logo/logo.jpg" alt="" width="40" height="14"/></span><div class="ph-head__t"><b>FisioTeck <svg class="ic ph-ver"><use href="#ic-check"/></svg></b><small>Canal · seguidores</small></div><span class="ph-follow">Siguiendo</span></div>
+            <div class="ph-chat">
+              <div class="ph-typing" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="ph-msg" data-m="0"><span class="ph-msg__ico"><svg aria-hidden="true"><use href="#ic-play"/></svg></span><div><b>Webinar gratuito</b><span>Reserva tu lugar en la próxima sesión en línea.</span></div><time>10:02</time></div>
+              <div class="ph-msg" data-m="1"><span class="ph-msg__ico ph-msg__ico--o"><svg aria-hidden="true"><use href="#ic-tag"/></svg></span><div><b>Cupón para miembros</b><span>Aprovecha tu descuento por tiempo limitado.</span></div><time>10:04</time></div>
+              <div class="ph-msg ph-msg--cta" data-m="2"><span class="ph-msg__ico ph-msg__ico--g"><svg aria-hidden="true"><use href="#ic-file"/></svg></span><div><b>Material gratis</b><span>Descarga la guía clínica en PDF.</span><em class="ph-cta" id="ph-cta">Ver en el Club</em></div><time>10:06</time></div>
+            </div>
+          </div>
+          <!-- Escena B: dentro del Club -->
+          <div class="ph-scene ph-scene--b" data-sc="b">
+            <div class="ph-head ph-head--club"><span class="ph-av ph-av--club"><img src="assets/img/logo/logo.jpg" alt="" width="40" height="14"/></span><div class="ph-head__t"><b>Club FisioTeck</b><small>Beneficios para ti</small></div></div>
+            <div class="ph-club">
+              <div class="ph-tile ph-tile--w"><span class="ph-tile__img"><img src="assets/img/hero/hero-3.webp" alt="" loading="lazy"/><i class="ph-play"><svg><use href="#ic-play"/></svg></i><em>EN VIVO</em></span><b>Webinar gratuito</b></div>
+              <div class="ph-tiles">
+                <div class="ph-tile"><span class="ph-tile__ico ph-tile__ico--g"><svg><use href="#ic-file"/></svg></span><b>Material gratis</b><i class="ph-dl"><svg><use href="#ic-check"/></svg></i></div>
+                <div class="ph-tile"><span class="ph-tile__ico ph-tile__ico--o"><svg><use href="#ic-tag"/></svg></span><b>Cupón</b><i class="ph-dl"><svg><use href="#ic-check"/></svg></i></div>
+              </div>
+              <span class="ph-toast"><svg><use href="#ic-check"/></svg>Acceso al Club</span>
+            </div>
+          </div>
+          <svg class="ph-cursor" viewBox="0 0 24 28" aria-hidden="true"><path d="M3 2v21l6-6 4 9 4-2-4-8h9Z" fill="#0b2347" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <p class="canal-demo__cap">Mensajes de ejemplo · <button type="button" id="canal-pausa" aria-pressed="false">Pausar animación</button></p>
+    </div>
+  </div>
+</section>
+
+<!-- CIFRAS -->
+<section class="stats-strip" aria-label="FisioTeck en cifras">
+  <div class="section-inner">
+    <div class="stat-card"><span class="stat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.92 12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span><div><div class="stat-num" data-target="500">0</div><div class="stat-label">Alumnos capacitados</div></div></div>
+    <div class="stat-card"><span class="stat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><div><div class="stat-num" data-target="30">0</div><div class="stat-label">Cursos especializados</div></div></div>
+    <div class="stat-card"><span class="stat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><div><div class="stat-num">100%</div><div class="stat-label">Formación garantizada</div></div></div>
   </div>
 </section>
 
@@ -83,77 +277,144 @@
         <div class="nosotros-areas" id="nosotros-areas"></div>
       </div>
       <div class="nosotros-visual reveal">
-        <img src="assets/img/galeria/foto1.jpg" alt="Clases FisioTeck"/>
+        <img src="assets/img/nosotros/nosotros.webp" onerror="this.onerror=null;this.src='assets/img/galeria/foto1.jpg'" alt="Fisioterapeutas en una sesión de formación FisioTeck" width="900" height="1000"/>
         <div class="nosotros-badge"><strong>+500</strong><span>Alumnos<br/>formados</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CURSOS -->
-<section id="cursos">
+<!-- ÁREAS -->
+<section id="areas" class="areas-sec">
   <div class="section-inner">
     <div class="section-header center reveal">
-      <div class="section-tag">Oferta Académica</div>
-      <h2 class="section-title">Cursos online diseñados para<br/><span>la salud y rehabilitación</span></h2>
-      <p class="section-desc">Explora nuestros programas especializados y da el siguiente paso en tu carrera profesional.</p>
+      <div class="section-tag">Tu próxima especialidad</div>
+      <h2 class="section-title">Áreas de <span>capacitación</span></h2>
+      <p class="section-desc">Selecciona un área y descubre los cursos disponibles.</p>
+    </div>
+    <div class="areas-grid" id="areas-grid"></div>
+  </div>
+</section>
+
+<!-- CURSOS -->
+<section id="cursos" class="cursos-sec">
+  <div class="section-inner">
+    <div class="section-header center reveal">
+      <div class="section-tag"><span class="tag-dot"></span>Oferta académica</div>
+      <h2 class="section-title">Capacítate con <span>especialistas</span></h2>
+      <p class="section-desc">Cursos en línea con certificado de reconocimiento. Toca cualquiera para ver el temario y reservar tu lugar.</p>
+      <div class="section-divider"></div>
     </div>
     <div class="cursos-filtros" id="cursos-filtros"></div>
-    <div class="cursos-carousel-wrapper">
-      <div class="cursos-carousel" id="cursos-carousel"></div>
+  </div>
+    <div class="carousel-wrapper" id="cursos-wrapper">
+      <div class="carousel-track" id="cursos-track"></div>
     </div>
-    <div class="carousel-controls">
-      <button class="carousel-btn" id="cursos-prev">&#8592;</button>
-      <button class="carousel-btn" id="cursos-next">&#8594;</button>
+  <div class="section-inner">
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="cursos-prev" aria-label="Cursos anteriores"><svg aria-hidden="true"><use href="#ic-chev-l"/></svg></button>
+      <button class="carousel-btn" id="cursos-pause" aria-label="Pausar movimiento" aria-pressed="false"><svg aria-hidden="true"><use href="#ic-pause"/></svg></button>
+      <button class="carousel-btn" id="cursos-next" aria-label="Cursos siguientes"><svg aria-hidden="true"><use href="#ic-chev-r"/></svg></button>
     </div>
   </div>
 </section>
 
-<!-- GALERÍA -->
-<section id="galeria">
+<!-- CÓMO EMPEZAR -->
+<section id="como-empezar" class="pasos-sec">
   <div class="section-inner">
     <div class="section-header center reveal">
-      <div class="section-tag">Galería Visual</div>
-      <h2 class="section-title">Capturas reales de<br/><span>clases y sesiones</span></h2>
-      <p class="section-desc">Una muestra del entorno de aprendizaje, materiales y sesiones impartidas por FisioTeck.</p>
+      <div class="section-tag">Tu siguiente paso</div>
+      <h2 class="section-title">Empieza a aprender en <span>tres pasos</span></h2>
+      <p class="section-desc">Elige un tema, crea tu acceso y continúa a tu ritmo.</p>
     </div>
-    <div class="galeria-carousel-wrapper">
-      <div class="galeria-carousel" id="galeria-carousel"></div>
-    </div>
-    <div class="carousel-controls">
-      <button class="carousel-btn" id="galeria-prev">&#8592;</button>
-      <button class="carousel-btn" id="galeria-next">&#8594;</button>
-    </div>
+    <ol class="pasos-grid">
+      <li class="paso-card reveal"><span class="paso-card__fondo" aria-hidden="true"></span><span class="paso-card__ico"><svg aria-hidden="true"><use href="#ic-compass"/></svg></span><p class="paso-card__num">Paso 1</p><h3>Descubre tu área</h3><p>Explora el catálogo o deja que la encuesta te oriente según tus intereses.</p><a class="paso-card__link" href="#encuesta">Encontrar mi curso <svg aria-hidden="true"><use href="#ic-arrow"/></svg></a></li>
+      <li class="paso-card reveal"><span class="paso-card__fondo" aria-hidden="true"></span><span class="paso-card__ico"><svg aria-hidden="true"><use href="#ic-user-plus"/></svg></span><p class="paso-card__num">Paso 2</p><h3>Crea tu cuenta</h3><p>Regístrate gratis y elige un curso de prueba para conocer la plataforma.</p><a class="paso-card__link" href="https://club.fisioteck.com/?mode=register">Crear cuenta <svg aria-hidden="true"><use href="#ic-arrow"/></svg></a></li>
+      <li class="paso-card reveal"><span class="paso-card__fondo" aria-hidden="true"></span><span class="paso-card__ico"><svg aria-hidden="true"><use href="#ic-cap"/></svg></span><p class="paso-card__num">Paso 3</p><h3>Aprende y avanza</h3><p>Accede al Club, consulta tus clases y continúa tu formación profesional.</p><a class="paso-card__link" href="#club">Conocer el Club <svg aria-hidden="true"><use href="#ic-arrow"/></svg></a></li>
+    </ol>
   </div>
 </section>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightbox-close">&#215;</button>
-  <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&#8592;</button>
-  <img id="lightbox-img" src="" alt="Vista ampliada"/>
-  <button class="lightbox-nav lightbox-next" id="lightbox-next">&#8594;</button>
-</div>
-
-<!-- OPINIONES -->
-<section id="opiniones">
+<!-- BENEFICIOS -->
+<section id="beneficios" class="benef-sec">
   <div class="section-inner">
     <div class="section-header center reveal">
-      <div class="section-tag op-tag">Testimonios</div>
-      <h2 class="section-title white">Lo que dicen<br/>nuestros alumnos</h2>
-      <p class="section-desc white-desc">Experiencias reales de quienes ya confían en FisioTeck.</p>
+      <div class="section-tag">Beneficios</div>
+      <h2 class="section-title">Beneficios de capacitarte <span>con FisioTeck</span></h2>
     </div>
-    <div class="opiniones-carousel-wrapper">
-      <div class="opiniones-carousel" id="opiniones-carousel"></div>
-    </div>
-    <div class="carousel-controls" style="margin-top:24px">
-      <button class="carousel-btn carousel-btn-dark" id="op-prev">&#8592;</button>
-      <button class="carousel-btn carousel-btn-dark" id="op-next">&#8594;</button>
+    <div class="benef-grid">
+      <article class="benef-card reveal"><span class="benef-card__ico"><svg aria-hidden="true"><use href="#ic-award"/></svg></span><h3>Certificado de reconocimiento</h3><p>Cada curso incluye constancia para respaldar tu formación.</p></article>
+      <article class="benef-card reveal"><span class="benef-card__ico"><svg aria-hidden="true"><use href="#ic-monitor"/></svg></span><h3>Modalidad en línea</h3><p>Estudia desde cualquier lugar con una experiencia práctica y flexible.</p></article>
+      <article class="benef-card reveal"><span class="benef-card__ico"><svg aria-hidden="true"><use href="#ic-book"/></svg></span><h3>Material de apoyo</h3><p>Recibe recursos complementarios para reforzar cada tema.</p></article>
+      <article class="benef-card reveal"><span class="benef-card__ico"><svg aria-hidden="true"><use href="#ic-bulb"/></svg></span><h3>Contenido especializado</h3><p>Fisioterapia y rehabilitación con teoría actualizada y aplicación clínica.</p></article>
+      <article class="benef-card reveal"><span class="benef-card__ico"><svg aria-hidden="true"><use href="#ic-phone"/></svg></span><h3>Acceso multidispositivo</h3><p>Consulta tus cursos desde celular, tablet o computadora.</p></article>
+      <article class="benef-card reveal"><span class="benef-card__ico"><svg aria-hidden="true"><use href="#ic-chat"/></svg></span><h3>Contacto directo</h3><p>Atención rápida por WhatsApp para resolver dudas e inscribirte fácilmente.</p></article>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- CERTIFICACIÓN -->
+<section id="certificacion" class="cert-sec">
+  <div class="section-inner cert-inner">
+    <div class="cert-copy reveal">
+      <div class="section-tag">Tu aprendizaje, acreditado</div>
+      <h2 class="section-title">Una constancia de <span>tu formación</span></h2>
+      <p class="section-desc">Los cursos de FisioTeck incluyen certificado de reconocimiento. Consulta en el detalle de cada curso lo que incluye y conserva una constancia de tu actualización profesional.</p>
+      <ul class="cert-list">
+        <li><span>01</span><div><strong>Constancia por curso</strong><small>Reconocimiento de la formación que completes.</small></div></li>
+        <li><span>02</span><div><strong>Respaldo profesional</strong><small>Suma a tu currículum y a tu práctica clínica.</small></div></li>
+        <li><span>03</span><div><strong>Formación continua</strong><small>Actualízate con programas de fisioterapia y rehabilitación.</small></div></li>
+      </ul>
+      <a class="cert-cta" href="#cursos">Elegir una capacitación <svg class="ic" aria-hidden="true"><use href="#ic-ur"/></svg></a>
+    </div>
+    <div class="cert-visual reveal" aria-label="Vista ilustrativa de un certificado">
+      <div class="cert-stage">
+        <span class="cert-sheet cert-sheet--b" aria-hidden="true"></span>
+        <span class="cert-sheet cert-sheet--a" aria-hidden="true"></span>
+        <div class="cert-doc" id="cert-doc">
+          <svg class="cert-doc__marco" viewBox="0 0 800 564" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="cg-oro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9e08a"/><stop offset=".45" stop-color="#d9a22a"/><stop offset="1" stop-color="#f3d46e"/></linearGradient>
+              <linearGradient id="cg-azul" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e2257"/><stop offset="1" stop-color="#1A3E8F"/></linearGradient>
+            </defs>
+            <rect x="10" y="10" width="780" height="544" rx="10" fill="none" stroke="url(#cg-azul)" stroke-width="14"/>
+            <rect x="26" y="26" width="748" height="512" rx="6" fill="none" stroke="url(#cg-oro)" stroke-width="3"/>
+            <rect x="36" y="36" width="728" height="492" rx="3" fill="none" stroke="#1A3E8F" stroke-opacity=".35" stroke-width="1"/>
+            <g fill="none" stroke="url(#cg-oro)" stroke-width="2.4" stroke-linecap="round">
+              <path d="M52 100C52 72 72 52 100 52"/><path d="M62 118C62 80 80 62 118 62"/><circle cx="52" cy="52" r="5" fill="url(#cg-oro)"/>
+              <path d="M748 100C748 72 728 52 700 52"/><path d="M738 118C738 80 720 62 682 62"/><circle cx="748" cy="52" r="5" fill="url(#cg-oro)"/>
+              <path d="M52 464C52 492 72 512 100 512"/><path d="M62 446C62 484 80 502 118 502"/><circle cx="52" cy="512" r="5" fill="url(#cg-oro)"/>
+              <path d="M748 464C748 492 728 512 700 512"/><path d="M738 446C738 484 720 502 682 502"/><circle cx="748" cy="512" r="5" fill="url(#cg-oro)"/>
+            </g>
+          </svg>
+          <span class="cert-doc__guilloche" aria-hidden="true"></span>
+          <span class="cert-doc__marca-agua" aria-hidden="true">FISIOTECK</span>
+          <div class="cert-doc__cuerpo">
+            <img class="cert-doc__logo" src="assets/img/logo/logo.jpg" alt="" width="150" height="40"/>
+            <p class="cert-doc__titulo">Certificado</p>
+            <p class="cert-doc__sub"><i></i>de reconocimiento<i></i></p>
+            <p class="cert-doc__txt">Se otorga con orgullo a</p>
+            <p class="cert-doc__nombre">Nombre del participante</p>
+            <p class="cert-doc__txt">por haber participado en el curso</p>
+            <p class="cert-doc__curso">Fisioterapia y rehabilitación</p>
+            <div class="cert-doc__pie">
+              <div class="cert-firma"><svg viewBox="0 0 120 40" aria-hidden="true"><path d="M4 28c10-22 16-22 18-8s6 14 14-2c4-8 8-6 8 2 0 8 8 4 14-6 6-10 10-8 8 2-1 8 6 8 14 0 8-8 14-4 18-2" fill="none" stroke="#1A3E8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><i></i><span>Coordinación académica</span></div>
+              <div class="cert-rosa" aria-hidden="true">
+                <span class="cert-rosa__cinta cert-rosa__cinta--l"></span><span class="cert-rosa__cinta cert-rosa__cinta--r"></span>
+                <span class="cert-rosa__disco"><svg viewBox="0 0 24 24"><use href="#ic-award"/></svg></span>
+              </div>
+              <div class="cert-firma"><svg viewBox="0 0 120 40" aria-hidden="true"><path d="M6 24c8-14 14-14 16-4 2 10 8 10 12-2 4-10 8-10 10-2 2 8 10 6 14-4 4-8 8-6 10 2 2 6 8 4 16-6" fill="none" stroke="#0e2257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><i></i><span>Dirección</span></div>
+            </div>
+          </div>
+          <span class="cert-doc__muestra">VISTA ILUSTRATIVA · MUESTRA SIN VALIDEZ</span>
+          <span class="cert-doc__brillo" aria-hidden="true"></span>
+        </div>
+        <span class="cert-chip cert-chip--1" aria-hidden="true"><svg class="ic"><use href="#ic-check"/></svg>Curso concluido</span>
+        <span class="cert-chip cert-chip--2" aria-hidden="true"><svg class="ic"><use href="#ic-award"/></svg>Reconocimiento</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- CLUB FISIOTECK -->
 <section id="club" class="club-section">
@@ -164,9 +425,9 @@
       <h2 class="section-title white club-title">Aprende, consulta y<br/><span>lleva más a tu práctica.</span></h2>
       <p class="section-desc white-desc club-desc">Un espacio profesional para descubrir nuevas técnicas, reforzar conocimientos y acceder a recursos que puedes utilizar en tu consulta.</p>
       <div class="club-trust" aria-label="Beneficios de acceso gratuito">
-        <div><span>✓</span><strong>15+ cursos disponibles</strong></div>
-        <div><span>✓</span><strong>Primera clase gratuita</strong></div>
-        <div><span>✓</span><strong>Recursos para tu práctica</strong></div>
+        <div><span><svg class="ic" aria-hidden="true"><use href="#ic-check"/></svg></span><strong>15+ cursos disponibles</strong></div>
+        <div><span><svg class="ic" aria-hidden="true"><use href="#ic-check"/></svg></span><strong>Primera clase gratuita</strong></div>
+        <div><span><svg class="ic" aria-hidden="true"><use href="#ic-check"/></svg></span><strong>Recursos para tu práctica</strong></div>
       </div>
       <div class="club-actions">
         <a class="club-btn-primary" href="https://club.fisioteck.com/?mode=login">Entrar al Club</a>
@@ -174,25 +435,124 @@
       <p class="club-fineprint">Explora el catálogo y conoce la primera clase antes de continuar.</p>
     </div>
 
-    <div class="club-access-card reveal">
-      <div class="club-card-head">
-        <span class="club-card-badge">Todo en tu Club</span>
-        <h3>Más que una biblioteca de cursos</h3>
-        <p>Contenido y herramientas diseñadas para acompañar tu crecimiento profesional.</p>
+    <div class="club-access-card club-access-card--app reveal">
+      <p class="ca-label"><span class="ca-live"></span>Así se ve tu espacio</p>
+      <div class="club-app" id="club-app" role="img" aria-label="Vista ilustrativa y animada del panel del Club: tus cursos, clases, material y certificados">
+        <div class="ca-bar"><span class="ca-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="ca-url">club.fisioteck.com</span><span class="ca-bar__av" aria-hidden="true">A</span></div>
+        <div class="ca-body">
+          <div class="ca-nav" aria-hidden="true">
+            <span class="ca-nav__logo"><img src="assets/img/logo/logo.jpg" alt="" width="44" height="14"/></span>
+            <button type="button" class="ca-nav__b is-on" data-s="0" tabindex="-1"><svg><use href="#ic-home"/></svg></button>
+            <button type="button" class="ca-nav__b" data-s="1" tabindex="-1"><svg><use href="#ic-play"/></svg></button>
+            <button type="button" class="ca-nav__b" data-s="2" tabindex="-1"><svg><use href="#ic-file"/></svg></button>
+            <button type="button" class="ca-nav__b" data-s="3" tabindex="-1"><svg><use href="#ic-award"/></svg></button>
+          </div>
+          <div class="ca-main" aria-hidden="true">
+            <div class="ca-screen is-on" data-s="0">
+              <div class="ca-hello"><span class="ca-hello__t"><b>Hola, Alex</b><small>Continúa donde te quedaste</small></span><span class="ca-pill">3 cursos</span></div>
+              <div class="ca-cards">
+                <div class="ca-card"><img src="assets/img/cursos/curso1.jpg" alt="" loading="lazy"/><span class="ca-prog" style="--p:68%"><i></i></span><em>68%</em></div>
+                <div class="ca-card"><img src="assets/img/cursos/curso5.jpg" alt="" loading="lazy"/><span class="ca-prog" style="--p:35%"><i></i></span><em>35%</em></div>
+                <div class="ca-card"><img src="assets/img/cursos/curso6.jpg" alt="" loading="lazy"/><span class="ca-prog" style="--p:12%"><i></i></span><em>12%</em></div>
+              </div>
+            </div>
+            <div class="ca-screen" data-s="1">
+              <div class="ca-player"><img src="assets/img/hero/hero-2.webp" alt="" loading="lazy"/><span class="ca-player__play"><svg><use href="#ic-play"/></svg></span><span class="ca-scrub"><i></i></span></div>
+              <ul class="ca-lessons">
+                <li class="is-done"><span class="ca-ck"><svg><use href="#ic-check"/></svg></span><b></b></li>
+                <li class="is-done"><span class="ca-ck"><svg><use href="#ic-check"/></svg></span><b></b></li>
+                <li class="is-now"><span class="ca-eq"><i></i><i></i><i></i></span><b></b></li>
+              </ul>
+            </div>
+            <div class="ca-screen" data-s="2">
+              <div class="ca-files">
+                <div class="ca-file"><span class="ca-file__ico"><svg><use href="#ic-file"/></svg></span><b></b><i></i></div>
+                <div class="ca-file"><span class="ca-file__ico ca-file__ico--g"><svg><use href="#ic-list"/></svg></span><b></b><i></i></div>
+                <div class="ca-file"><span class="ca-file__ico"><svg><use href="#ic-file"/></svg></span><b></b><i></i></div>
+                <div class="ca-file"><span class="ca-file__ico ca-file__ico--g"><svg><use href="#ic-book"/></svg></span><b></b><i></i></div>
+              </div>
+            </div>
+            <div class="ca-screen" data-s="3">
+              <div class="ca-cert">
+                <svg class="ca-ring" viewBox="0 0 80 80"><circle cx="40" cy="40" r="32" class="ca-ring__bg"/><circle cx="40" cy="40" r="32" class="ca-ring__fg"/></svg>
+                <span class="ca-ring__ico"><svg><use href="#ic-award"/></svg></span>
+                <div class="ca-cert__doc"><i></i><i></i><i></i><span class="ca-cert__sello"></span></div>
+                <span class="ca-pill ca-pill--ok"><svg><use href="#ic-check"/></svg>Completado</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="club-benefits-grid">
-        <article><span>01</span><div><strong>Cursos especializados</strong><small>Fisioterapia, rehabilitación y aplicación clínica.</small></div></article>
-        <article><span>02</span><div><strong>Clases y sesiones</strong><small>Contenido grabado y encuentros profesionales en línea.</small></div></article>
-        <article><span>03</span><div><strong>Material de apoyo</strong><small>PDF, guías y recursos para reforzar cada tema.</small></div></article>
-        <article><span>04</span><div><strong>Herramientas clínicas</strong><small>Recursos prácticos para utilizar durante la consulta.</small></div></article>
-        <article><span>05</span><div><strong>Certificados</strong><small>Reconocimiento de los cursos que completes.</small></div></article>
-        <article><span>06</span><div><strong>Beneficios exclusivos</strong><small>Novedades, comunidad y ventajas para miembros.</small></div></article>
+      <div class="ca-tabs" role="tablist" aria-label="Secciones del Club">
+        <button type="button" class="ca-tab is-on" data-s="0" role="tab" aria-selected="true">Tus cursos</button>
+        <button type="button" class="ca-tab" data-s="1" role="tab" aria-selected="false">Clases</button>
+        <button type="button" class="ca-tab" data-s="2" role="tab" aria-selected="false">Material</button>
+        <button type="button" class="ca-tab" data-s="3" role="tab" aria-selected="false">Certificados</button>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PREGUNTAS FRECUENTES -->
+<section id="preguntas" class="faq-sec">
+  <div class="section-inner faq-inner">
+    <div class="faq-head reveal">
+      <div class="section-tag">Antes de empezar</div>
+      <h2 class="section-title">Resolvamos <span>tus dudas</span></h2>
+      <p class="section-desc">Reunimos lo que más nos preguntan antes de crear una cuenta. Si no encuentras tu respuesta, te ayudamos.</p>
+      <div class="faq-help faq-help--escena">
+        <span class="fh-bg" aria-hidden="true"></span>
+        <span class="fh-deco fh-deco--1" aria-hidden="true"><svg><use href="#ic-chat"/></svg></span>
+        <span class="fh-deco fh-deco--2" aria-hidden="true"><svg><use href="#ic-bulb"/></svg></span>
+        <span class="fh-deco fh-deco--3" aria-hidden="true"><svg><use href="#ic-star"/></svg></span>
+        <div class="fh-texto">
+          <strong>¿Aún tienes dudas?</strong>
+          <p>Elige cómo prefieres que te ayudemos.</p>
+          <a class="faq-btn faq-btn--wa" href="https://wa.me/5212381478840?text=Hola,%20tengo%20una%20duda%20sobre%20los%20cursos" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <button type="button" class="faq-btn faq-btn--guia" id="faq-guia">Habla con la Guía FisioTeck</button>
+        </div>
+        <div class="fh-escena">
+          <span class="fh-aro" aria-hidden="true"></span>
+          <span class="fh-aro fh-aro--2" aria-hidden="true"></span>
+          <span class="fh-suelo" aria-hidden="true"></span>
+          <span class="faq-guia__nota" aria-hidden="true">¡Pregúntame!</span>
+          <div class="faq-guia__cara" id="faq-cara" aria-hidden="true"><img id="faq-cara-img" src="assets/img/guia/guia-bienvenida.webp" alt="" width="220" height="220" loading="lazy" draggable="false"/></div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-list reveal">
+      <details><summary><span class="faq-num">01</span><span class="faq-preg">¿Necesito experiencia previa?</span><span class="faq-ind" aria-hidden="true"></span></summary><p>Los cursos están pensados para fisioterapeutas y profesionales de la salud. Cada curso muestra su temario para que valides si es para ti.</p></details>
+      <details><summary><span class="faq-num">02</span><span class="faq-preg">¿Cómo funciona la prueba gratuita?</span><span class="faq-ind" aria-hidden="true"></span></summary><p>Creas tu cuenta gratis en el Club, entras a tu espacio y eliges un curso para conocer su primera clase sin costo. Registrarte no requiere pago.</p></details>
+      <details><summary><span class="faq-num">03</span><span class="faq-preg">¿Puedo estudiar desde mi celular?</span><span class="faq-ind" aria-hidden="true"></span></summary><p>Sí. Los cursos son en línea y puedes consultarlos desde celular, tablet o computadora.</p></details>
+      <details><summary><span class="faq-num">04</span><span class="faq-preg">¿Cómo obtengo mi certificado?</span><span class="faq-ind" aria-hidden="true"></span></summary><p>Cada curso incluye certificado de reconocimiento. Si quieres confirmar los requisitos de uno en particular, escríbenos por WhatsApp.</p></details>
+      <details><summary><span class="faq-num">05</span><span class="faq-preg">¿La encuesta me inscribe automáticamente?</span><span class="faq-ind" aria-hidden="true"></span></summary><p>No. La encuesta solo te orienta y recomienda opciones; tú eliges el curso y confirmas tu decisión al crear o ingresar a tu cuenta.</p></details>
+      <details><summary><span class="faq-num">06</span><span class="faq-preg">¿Cómo me inscribo a un curso?</span><span class="faq-ind" aria-hidden="true"></span></summary><p>Abre el detalle del curso y pulsa “Inscribirme por WhatsApp”. El equipo te confirma los pasos y tu acceso.</p></details>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACTO -->
+<!-- OPINIONES -->
+<section id="opiniones" class="tm-sec">
+  <span class="tm-blob tm-blob--a" aria-hidden="true"></span><span class="tm-blob tm-blob--b" aria-hidden="true"></span>
+  <div class="section-inner">
+    <div class="section-header center reveal">
+      <div class="section-tag"><span class="tag-dot"></span>Testimonios</div>
+      <h2 class="section-title white">Lo que dicen <span>nuestros alumnos</span></h2>
+      <p class="section-desc white-desc">Recomendaciones reales de quienes ya confían en FisioTeck.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="tm-resumen reveal">
+      <span class="tm-stars" aria-hidden="true"><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg><svg><use href="#ic-star"/></svg></span>
+      <span><strong>8</strong> recomendaciones destacadas en Facebook</span>
+    </div>
+  </div>
+  <div class="tm-rows" id="tm-rows" aria-label="Opiniones de alumnos"></div>
+  <div class="section-inner tm-cta reveal">
+    <a class="tm-link" href="https://www.facebook.com/profile.php?id=61578034067438" target="_blank" rel="noopener noreferrer">Ver más opiniones en Facebook <svg aria-hidden="true"><use href="#ic-ur"/></svg></a>
+  </div>
+</section>
+
 <section id="contacto">
   <div class="section-inner">
     <div class="section-header center reveal">
@@ -205,34 +565,65 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="assets/img/logo/logo.jpg" alt="FisioTeck"/>
-      <p>Plataforma especializada en educación continua para fisioterapeutas y profesionales de la salud en México y Latinoamérica.</p>
-      <div class="footer-social" id="footer-social"></div>
+<footer class="ft-footer">
+  <canvas class="ft-fx" id="ft-fx" aria-hidden="true"></canvas>
+  <svg class="ft-ecg" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path class="ft-ecg__line" d="M0 70H300l20-8 18 8h60l16-34 22 70 20-56 14 20h120l20-8 18 8h80l16-34 22 70 20-56 14 20h130l20-8 18 8h60l16-34 22 70 20-56 14 20H1440"/>
+  </svg>
+  <div class="ft-wrap">
+    <div class="ft-cta">
+      <div>
+        <h2>Da el siguiente paso en tu formación</h2>
+        <p>Crea tu cuenta gratis, conoce la plataforma y elige tu curso de prueba.</p>
+      </div>
+      <div class="ft-cta__btns">
+        <a class="ft-btn ft-btn--main" href="https://club.fisioteck.com/?mode=register">Crear mi cuenta gratis <svg aria-hidden="true"><use href="#ic-ur"/></svg></a>
+        <a class="ft-btn ft-btn--ghost" href="https://wa.me/5212381478840" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Navegación</h4>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#opiniones">Opiniones</a></li>
-        <li><a href="#club" style="color:#1565C0;">⭐ Club</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+    <div class="ft-cols">
+      <div class="ft-brand">
+        <span class="ft-brand__logo"><img src="assets/img/logo/logo.jpg" alt="FisioTeck" width="168" height="46"/></span>
+        <p>Plataforma especializada en educación continua para fisioterapeutas y profesionales de la salud en México y Latinoamérica.</p>
+        <div class="footer-social" id="footer-social"></div>
+      </div>
+      <nav class="ft-col" aria-label="Navegación del sitio">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#certificacion">Certificación</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+        </ul>
+      </nav>
+      <nav class="ft-col" aria-label="Club y cuenta">
+        <h3>Club y cuenta</h3>
+        <ul>
+          <li><a href="#club">Conocer el Club</a></li>
+          <li><a href="https://club.fisioteck.com/?mode=register">Crear cuenta gratis</a></li>
+          <li><a href="https://club.fisioteck.com/?mode=login">Iniciar sesión</a></li>
+          <li><a href="#encuesta">Encontrar mi curso</a></li>
+        </ul>
+      </nav>
+      <div class="ft-col">
+        <h3>Contacto</h3>
+        <ul id="footer-contacto-list"></ul>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Contacto</h4>
-      <ul id="footer-contacto-list"></ul>
+    <div class="ft-bottom">
+      <p>© <span id="footer-year">2026</span> FisioTeck · Formación constante, resultados excelentes · Todos los derechos reservados · <a href="aviso-de-privacidad.html">Aviso de privacidad</a></p>
+      <nav class="ft-legal" aria-label="Legal"><a href="aviso-de-privacidad.html">Aviso de privacidad</a><a href="terminos-y-condiciones.html">Términos y condiciones</a></nav>
+      <a class="ft-top" href="#inicio" aria-label="Volver al inicio"><svg aria-hidden="true"><use href="#ic-up"/></svg>Volver arriba</a>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© <span id="footer-year">2026</span> FisioTeck · Formación Constante, Resultados Excelentes · Todos los derechos reservados</p>
   </div>
 </footer>
+
+<a class="wa-float" href="https://wa.me/5212381478840?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20sus%20cursos" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+  <span class="wa-float__tip" aria-hidden="true">¿Dudas? Escríbenos</span>
+  <img src="assets/img/brands/whatsapp.svg" alt="" width="34" height="34"/>
+</a>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
@@ -259,7 +650,7 @@
           <span class="modal-inicio" id="modal-inicio"></span>
         </div>
         <div class="modal-btns">
-          <a id="modal-btn-wa" href="#" target="_blank" class="modal-btn-primary">📲 Inscribirme por WhatsApp</a>
+          <a id="modal-btn-wa" href="#" target="_blank" class="modal-btn-primary">Inscribirme por WhatsApp</a>
           <a href="https://wa.me/5212381478840?text=Hola,%20quiero%20más%20información%20sobre%20un%20curso" target="_blank" class="modal-btn-secondary">Solicitar más información</a>
         </div>
       </div>
@@ -269,5 +660,10 @@
 
 <script src="data.js"></script>
 <script src="script.js"></script>
+<script src="landing.js"></script>
+<script src="api.js"></script>
+<script src="encuesta.js"></script>
+<script src="guia.js"></script>
+<script src="visitas.js" data-pagina="landing" defer></script>
 </body>
 </html>
