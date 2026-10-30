@@ -340,3 +340,15 @@ Orden (cuenta gratuita nueva): 1) bienvenida con confeti → 2) **regalo de +100
 - No se puede agregar `customer.subscription.updated` al webhook (la cuenta de Stripe no está a nuestro alcance). En su lugar, el servidor le pregunta a Stripe **cada 6 horas** por cada suscripción guardada y aplica los mismos cambios (cancelar/reactivar desde el portal, pago pendiente, suscripción terminada). Solo escribe cuando algo cambió. Si algún día se agrega el evento al webhook, ambos conviven sin estorbarse.
 - Reglas de Firestore: **publicadas por el dueño**. Repo viejo `club-fisioteck-admin`: **archivado por el dueño**. Pendientes de Stripe/webhook: ninguno.
 - 213 pruebas del servidor pasan.
+
+## Cupón en el pago, vista previa, juegos y revisión del panel (30 de octubre de 2026)
+
+- **Ícono en Google**: el favicon está bien publicado y declarado (favicon.ico + icon-192, ambos responden 200 en www.fisioteck.com y club.fisioteck.com). Google tarda días/semanas en refrescarlo; se puede apurar pidiendo indexación de la portada en Search Console.
+- **Checkout de Stripe**: campo «Agregar código» visible (allow_promotion_codes, como Alintec y Zoorigen) y sin Stripe Link (como Zoorigen). Cuando el cupón de los recordatorios se aplica solo, el campo se quita (Stripe no permite ambos) y vuelve si el cupón falla. Los ciclos de correos ya eran copia exacta de Zoorigen (7 correos, 4 días de descanso, 3 ciclos); recuerda que arrancan APAGADOS y se encienden en el panel.
+- **Vista previa gratis (como Alintec)**: la clase marcada isPreview se ve sin membresía (Club, video y progreso); antes la etiqueta existía pero el candado la bloqueaba.
+- **Juegos de clase**: verificados en la demo (entrega, nombres de campos en las 3 capas, calificación). Editor: memorama hasta 10 pares y sopa hasta 10 palabras con AVISO (antes recortaba a 8 en silencio).
+- **Desbloqueo de cursos**: confirmado igual que Alintec/Zoorigen (12 retos con mínimo 2 por tipo; premio por 4 invitados; premios Profesional 2,500 XP y Maestro 6,000 XP; el canje abre el curso en acceso, progreso y video). Juegos y preguntas ahora también respetan el escalonado.
+- **Materiales**: estados idénticos entre servidor y Club; la prueba gratuita ahora también respeta «se abre al terminar la clase N».
+- **ft:clase-completada** por fin se dispara al marcar una clase.
+- **Panel responsivo**: revisadas las 22 secciones a 320 y 375 px con datos largos: sin desbordes ni tablas cortadas; modales y editor de cursos caben; menú lateral y hamburguesa funcionan (lo que parecía fallo era la pantalla de login).
+- 213 pruebas del servidor pasan (la de vista previa se actualizó al comportamiento de Alintec).
