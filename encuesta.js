@@ -330,7 +330,8 @@
     cuerpo.appendChild(promo());
     const a = nodo('div', 'zenc__acc');
     const ver = boton('zenc-btn zenc-btn--sec', 'Ver temario', () => { if (typeof openModal === 'function') openModal(i); });
-    a.append(enlace('zenc-btn', 'Crear mi cuenta gratis', URL_REGISTRO), enlace('zenc-btn zenc-btn--wa', 'Inscribirme por WhatsApp', 'https://wa.me/' + WA + '?text=' + encodeURIComponent('Hola, quiero inscribirme al curso: ' + c.nombre), true), ver);
+    // El curso elegido viaja en el enlace (como Zoorigen): fisioteck.com y club.fisioteck.com no comparten almacenamiento
+    a.append(enlace('zenc-btn', 'Crear mi cuenta gratis', URL_REGISTRO + '&cursoPref=' + encodeURIComponent(c.nombre)), enlace('zenc-btn zenc-btn--wa', 'Inscribirme por WhatsApp', 'https://wa.me/' + WA + '?text=' + encodeURIComponent('Hola, quiero inscribirme al curso: ' + c.nombre), true), ver);
     cuerpo.appendChild(a);
     const b = nodo('div', 'zenc__acc');
     b.append(enlace('zenc-link', 'Ya tengo cuenta', URL_LOGIN), boton('zenc-link', 'Elegir otro curso', pintarResultado));
