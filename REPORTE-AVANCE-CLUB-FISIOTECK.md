@@ -334,3 +334,9 @@ Orden (cuenta gratuita nueva): 1) bienvenida con confeti → 2) **regalo de +100
 - **Reglas de Firestore**: copia lista para pegar en FIRESTORE-REGLAS-PARA-PEGAR.txt (incluye que el administrador responda en el foro). **Hay que publicarlas en Firebase.**
 - Pendiente del dueño: archivar el repo club-fisioteck-admin en GitHub (Settings → Archive this repository); no se pudo desde aquí.
 - Pruebas: 212 del servidor pasan; revisado en la demo (guardados, avisos de insignia, noticias, panel).
+
+## Sin acceso al panel de Stripe: revisión cada 6 horas (30 de octubre de 2026)
+
+- No se puede agregar `customer.subscription.updated` al webhook (la cuenta de Stripe no está a nuestro alcance). En su lugar, el servidor le pregunta a Stripe **cada 6 horas** por cada suscripción guardada y aplica los mismos cambios (cancelar/reactivar desde el portal, pago pendiente, suscripción terminada). Solo escribe cuando algo cambió. Si algún día se agrega el evento al webhook, ambos conviven sin estorbarse.
+- Reglas de Firestore: **publicadas por el dueño**. Repo viejo `club-fisioteck-admin`: **archivado por el dueño**. Pendientes de Stripe/webhook: ninguno.
+- 213 pruebas del servidor pasan.
