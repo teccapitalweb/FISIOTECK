@@ -321,3 +321,16 @@ Orden (cuenta gratuita nueva): 1) bienvenida con confeti → 2) **regalo de +100
 - **Video**: cerrar el reproductor antes de que cargue cancela la carga (ya no suena oculto).
 - **Curso de la encuesta**: viaja en el enlace `?cursoPref=` de fisioteck.com al Club; al abrir la prueba gratuita se propone ese curso primero.
 - Pruebas: 212 del servidor pasan; revisado en la demo local (reto del día por API, insignias, notificaciones, detección de cuentas Google y el curso preferido).
+
+## Panel corregido, campana del servidor, noticias guardadas y paridad (29 de octubre de 2026, segunda tanda)
+
+- **Panel**: la casilla «Miembros activos» carga el número guardado y el publicado (ya no vuelve a 87); «Ver en Stripe» abre el panel real (no el de prueba); «Editar datos» ya no cambia el estado de acceso (solo Activar / Regalar / Quitar acceso, por el servidor y con bitácora) y se quitaron las versiones que escribían directo en Firestore; al publicar se detecta si otro administrador publicó antes y se avisa; sección «Noticias automáticas» (listar, ocultar, traer ahora).
+- **Suscripción**: botón «Reactivar mi suscripción» cuando está cancelada pero vigente; estado «Pago no confirmado» separado de «vencido» (aviso rojo con «Gestionar en Stripe»).
+- **Campana**: el servidor crea avisos personales de certificado emitido, insignia nueva y premio ganado (services/avisos.js crearAviso) y el Club los muestra.
+- **Noticias**: guardadas en Firestore (services/noticias.js), tarea cada 12 horas, /api/news las sirve y al llegar nuevas se deja un aviso general (uno al día).
+- **Cursos**: las clases se completan en orden también en la pantalla (el servidor ya lo exigía) y el avance que falla por un corte de red queda en cola y se reintenta solo (como Alintec).
+- **Material**: pestaña «Guardados» con pin en cada tarjeta; los libros guardados y la página del lector ahora son por cuenta.
+- **Foro**: avatares ilustrados de los autores en temas y respuestas (cuentas que eligieron avatar; las demás, su inicial).
+- **Reglas de Firestore**: copia lista para pegar en FIRESTORE-REGLAS-PARA-PEGAR.txt (incluye que el administrador responda en el foro). **Hay que publicarlas en Firebase.**
+- Pendiente del dueño: archivar el repo club-fisioteck-admin en GitHub (Settings → Archive this repository); no se pudo desde aquí.
+- Pruebas: 212 del servidor pasan; revisado en la demo (guardados, avisos de insignia, noticias, panel).

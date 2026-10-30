@@ -1,0 +1,168 @@
+rules_version = '2';
+// Reglas del Club FisioTeck.
+// Cierran el hueco de las reglas anteriores, donde cualquier persona con sesión podía leer y escribir el documento de CUALQUIER socio
+// (por ejemplo ponerse status:'active' sin pagar) y escribir config, notificaciones y foro.
+// El servidor (Railway) usa el Admin SDK y no pasa por estas reglas. Lo que antes hacía el navegador y aquí no se permite lo hace el servidor:
+//  - vincular pagos hechos antes de crear la cuenta y revisar si un correo ya tiene cuenta: POST /api/cuenta/vincular
+//  - marcar "inactive" una membresía vencida: POST /api/cuenta/vencimiento
+//  - cambios de plan, pagos, créditos, retos y logros: servicios del servidor
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+
+    function isAdmin() {
+      return signedIn()
+        && request.auth.token.email is string
+        && request.auth.token.get('email_verified', false) == true
+        && request.auth.token.email.lower() in [
+          'teccapitalweb@gmail.com',
+          'fisiotec25@gmail.com'
+        ];
+    }
+
+    function own(uid) { return signedIn() && request.auth.uid == uid; }
+
+    // Campos que solo el servidor o el administrador pueden tocar
+    function camposProtegidos() {
+      return ['status', 'plan', 'payments', 'accessUntil', 'nextPaymentDate', 'lastPaymentDate',
+              'paymentMethod', 'stripeCustomerId', 'stripeSubscriptionId', 'cancelledAt', 'role', 'giftedAt',
+              'trialCourseId', 'trialStartedAt', 'creditos', 'creditosCanjeados', 'creditosAviso',
+              'founder', 'fundador', 'regalos', 'activadoManualmente', 'activadoPor', 'activadoEn', 'canceladoPor', 'canceladoEn'];
+    }
+
+    // Al crear su documento, el socio tampoco puede traer plan, pagos, Stripe ni prueba gratuita
+    // (el estado sí se permite, pero solo como "registered": ver la regla de create).
+    function camposAlCrear() {
+      return ['plan', 'payments', 'accessUntil', 'nextPaymentDate', 'lastPaymentDate',
+              'paymentMethod', 'stripeCustomerId', 'stripeSubscriptionId', 'cancelledAt', 'role', 'giftedAt',
+              'trialCourseId', 'trialStartedAt', 'creditos', 'creditosCanjeados', 'creditosAviso',
+              'founder', 'fundador', 'regalos', 'activadoManualmente', 'activadoPor', 'activadoEn', 'canceladoPor', 'canceladoEn'];
+    }
+
+    // Socio con membresía vigente según su estado (el servidor pasa a "inactive" al vencer)
+    function esSocioActivo() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/members/$(request.auth.uid))
+        && get(/databases/$(database)/documents/members/$(request.auth.uid)).data.get('status', '') in ['active', 'paid', 'cancelled'];
+    }
+
+    // Precios: lectura pública (el splash y la landing los muestran antes de iniciar sesión)
+    // Solo el documento de precios es público; los demás (por ejemplo los recordatorios de pago) los ve únicamente el administrador
+    match /config/{docId} {
+      allow read: if docId == 'club' || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /members/{userId} {
+      allow read: if own(userId) || isAdmin();
+      // Un socio crea su propio documento solo como "registered" y sin pagos
+      allow create: if isAdmin() || (own(userId)
+        && request.resource.data.get('status', 'registered') == 'registered'
+        && request.resource.data.get('termsAcceptedAt', null) != null // no hay cuenta del Club sin aceptar los términos
+        && !request.resource.data.keys().hasAny(camposAlCrear()));
+      // Un socio edita su perfil, pero no su plan, estado ni pagos
+      allow update: if isAdmin() || (own(userId)
+        && !request.resource.data.diff(resource.data).affectedKeys().hasAny(camposProtegidos()));
+      allow delete: if isAdmin();
+
+      // El avance de los cursos (progress/courses) lo escribe SOLO el servidor (POST /api/cursos/:id/progreso):
+      // así nadie puede marcarse cursos completos para pedir certificados. Logros, XP y racha (progress/logros) también los calcula
+      // SOLO el servidor; progress/achievements es el historial anterior: se conserva y ya no se puede escribir desde el navegador.
+      match /progress/{doc} {
+        allow read: if own(userId) || isAdmin();
+        // 'retos' (retos superados) y 'premios' (premio por invitar) también son solo del servidor
+        allow write: if isAdmin() || (own(userId) && !(doc in ['courses', 'retos', 'premios', 'logros', 'achievements', 'quiz']));
+      }
+      match /eva_records/{doc}   { allow read, write: if own(userId) || isAdmin(); }
+      match /read_notifs/{doc}   { allow read, write: if own(userId) || isAdmin(); }
+    }
+
+    // Directorio VIP: cualquier cuenta con sesión ve las tarjetas PUBLICADAS (la suya, siempre); cada quien escribe solo su tarjeta.
+    // El contacto (WhatsApp, correo, redes) NO vive aquí: lo guarda y entrega el servidor (directorioContacto, sin acceso desde el navegador).
+    match /directorio/{userId} {
+      allow read: if isAdmin() || own(userId) || (signedIn() && resource.data.get('publicado', false) == true);
+      // El administrador puede ocultar una tarjeta (visible: false) desde su panel
+      allow update: if isAdmin() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['visible', 'ocultaPor', 'ocultaEn']);
+      allow create, update: if own(userId)
+        && request.resource.data.keys().hasOnly(['nombre', 'especialidad', 'ciudad', 'bio', 'publicado', 'actualizado', 'puesto', 'empresa', 'avatar', 'estado', 'portadaColor', 'foto'])
+        && request.resource.data.nombre is string && request.resource.data.nombre.size() <= 60
+        && request.resource.data.bio.size() <= 200
+        && (!('foto' in request.resource.data) || (request.resource.data.foto is string && request.resource.data.foto.size() <= 70000 && request.resource.data.foto.matches('^data:image/jpeg;base64,.*')));
+      allow delete: if own(userId) || isAdmin();
+    }
+    match /directorioContacto/{userId} { allow read, write: if false; }
+    match /directorioModeracion/{userId} { allow read, write: if false; } // la moderación la maneja solo el servidor
+
+    // Avisos para los socios: todos leen, solo el administrador publica
+    match /member_notifications/{doc} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+    }
+
+    // Alertas internas del sistema (pagos, cancelaciones): solo administrador
+    match /notifications/{doc} {
+      allow read, write: if isAdmin();
+    }
+
+    match /pending_members/{doc} {
+      allow read, write: if isAdmin();
+    }
+
+    // Foro: cualquier cuenta lo lee; solo socios con membresía vigente publican, responden y dan "me gusta".
+    match /forum_posts/{postId} {
+      allow read: if signedIn();
+      allow create: if isAdmin() || (esSocioActivo()
+        && request.resource.data.authorId == request.auth.uid
+        && request.resource.data.title is string && request.resource.data.title.size() <= 150
+        && request.resource.data.body is string && request.resource.data.body.size() <= 3000
+        && (!('imagen' in request.resource.data) || (request.resource.data.imagen is string && request.resource.data.imagen.size() <= 300000))
+        && request.resource.data.get('replyCount', 0) == 0
+        && !('official' in request.resource.data));
+      allow update: if isAdmin()
+        // el autor edita su texto, sin tocar autoría, fecha, "me gusta" ni contador
+        || (esSocioActivo() && resource.data.authorId == request.auth.uid
+          && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['authorId', 'createdAt', 'likes', 'replyCount', 'official'])
+          && (!('imagen' in request.resource.data) || (request.resource.data.imagen is string && request.resource.data.imagen.size() <= 300000)))
+        // un socio suma una respuesta (contador +1)
+        || (esSocioActivo()
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['replyCount'])
+          && request.resource.data.replyCount == resource.data.get('replyCount', 0) + 1)
+        // un socio resta 1 al contador cuando borra SU respuesta
+        || (esSocioActivo()
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['replyCount'])
+          && request.resource.data.replyCount == resource.data.get('replyCount', 0) - 1
+          && request.resource.data.replyCount >= 0)
+        // un socio agrega o quita SU "me gusta"
+        || (esSocioActivo()
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes'])
+          && ((request.resource.data.likes.size() == resource.data.get('likes', []).size() + 1
+                && request.resource.data.likes.hasAll(resource.data.get('likes', []))
+                && request.resource.data.likes.hasAny([request.auth.uid]))
+              || (request.resource.data.likes.size() == resource.data.get('likes', []).size() - 1
+                && resource.data.get('likes', []).hasAll(request.resource.data.likes)
+                && !request.resource.data.likes.hasAny([request.auth.uid]))));
+      allow delete: if isAdmin() || (signedIn() && resource.data.authorId == request.auth.uid);
+
+      match /replies/{replyId} {
+        allow read: if signedIn();
+        // El administrador puede responder aunque su cuenta no tenga membresía (igual que al crear temas)
+        allow create: if (esSocioActivo() || isAdmin())
+          && request.resource.data.authorId == request.auth.uid
+          && request.resource.data.body is string && request.resource.data.body.size() <= 2000;
+        allow update: if isAdmin()
+          || (esSocioActivo()
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes'])
+            && ((request.resource.data.likes.size() == resource.data.get('likes', []).size() + 1
+                  && request.resource.data.likes.hasAll(resource.data.get('likes', []))
+                  && request.resource.data.likes.hasAny([request.auth.uid]))
+                || (request.resource.data.likes.size() == resource.data.get('likes', []).size() - 1
+                  && resource.data.get('likes', []).hasAll(request.resource.data.likes)
+                  && !request.resource.data.likes.hasAny([request.auth.uid]))));
+        // borra la respuesta su autor, o el autor del tema (cuando elimina su tema con todas sus respuestas)
+        allow delete: if isAdmin() || (signedIn() && (resource.data.authorId == request.auth.uid
+          || get(/databases/$(database)/documents/forum_posts/$(postId)).data.authorId == request.auth.uid));
+      }
+    }
+  }
+}
